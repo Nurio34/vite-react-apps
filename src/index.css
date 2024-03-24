@@ -5,3 +5,7 @@
 .padding {
     @apply py-[2vh] px-[4vw];
 }
+
+.padding-sm {
+    @apply py-1 px-2;
+}

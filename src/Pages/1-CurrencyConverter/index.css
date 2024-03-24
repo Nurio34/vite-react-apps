@@ -1,0 +1,59 @@
+.currency-converter .anim-p {
+    top: 50%;
+    left: 0;
+    transform: translate(1rem, -50%);
+}
+
+.currency-converter .animate {
+    animation: move 0.2s ease-in-out forwards;
+}
+
+.currency-converter .animate-back {
+    animation: moveBack 0.2s ease-in-out forwards;
+}
+
+@keyframes move {
+    to {
+        transform: translate(1.5rem, -170%);
+        color: black;
+        padding-inline: 0.5rem;
+        font-size: 0.7rem;
+    }
+}
+@keyframes moveBack {
+    from {
+        transform: translate(1.5rem, -150%);
+        color: black;
+        padding-inline: 0.5rem;
+        font-size: 0.7rem;
+    }
+    to {
+        transform: translate(1rem, -50%);
+        color: rgb(209, 213, 219);
+        font-size: 1rem;
+    }
+}
+
+.currency-converter {
+    background: linear-gradient(
+        -45deg,
+        red,
+        purple,
+        blue,
+        green,
+        yellow,
+        orange
+    );
+    background-repeat: repeat;
+    background-size: 400% 400%;
+    animation: bg 5s ease infinite alternate;
+}
+
+@keyframes bg {
+    from {
+        background-position: 0% 50%;
+    }
+    to {
+        background-position: 100% 50%;
+    }
+}
