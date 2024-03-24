@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.padding {
+    @apply py-[2vh] px-[4vw];
+}
