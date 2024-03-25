@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { FaExchangeAlt } from "react-icons/fa";
 import { useFetch } from "../useFetch";
-import { currencyCodes } from "../../currencyCodes";
+import { currencyCodes } from "../currencyCodes";
 
 function Form({ from, setFrom, to, setTo, amount, setAmount }) {
     const AmountInp = useRef();
