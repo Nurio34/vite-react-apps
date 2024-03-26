@@ -4,7 +4,7 @@ import { setMainHeight } from "../Store/components";
 import { Route, Routes } from "react-router-dom";
 import Home from "../Pages/0-Home";
 import CurrencyConerter from "../Pages/1-CurrencyConverter";
-import ImageGenerator from "../Pages/2-ImageFılter";
+import FilterAnimation from "../Pages/2-ImageFılter";
 
 function Main() {
     const { header, mainHeight } = useSelector((s) => s.components);
@@ -36,8 +36,8 @@ function Main() {
                     element={<CurrencyConerter />}
                 />
                 <Route
-                    path="/react_projects/image_generator"
-                    element={<ImageGenerator />}
+                    path="/react_projects/filter_animation"
+                    element={<FilterAnimation />}
                 />
             </Routes>
         </main>

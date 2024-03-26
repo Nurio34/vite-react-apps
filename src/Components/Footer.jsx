@@ -17,23 +17,8 @@ function Footer() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/react_projects/image_generator">
+                    <Link to="/react_projects/filter_animation">
                         Filter Animation
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/react_projects/image_generator">
-                        Image Generator
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/react_projects/image_generator">
-                        Image Generator
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/react_projects/image_generator">
-                        Image Generator
                     </Link>
                 </li>
             </ul>
