@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { FaExchangeAlt } from "react-icons/fa";
-import { useFetch } from "../useFetch";
+import { useFetch } from "../../../Hooks/useFetch";
 import { currencyCodes } from "../currencyCodes";
 
 function Form({ from, setFrom, to, setTo, amount, setAmount }) {
@@ -43,7 +43,6 @@ function Form({ from, setFrom, to, setTo, amount, setAmount }) {
     useEffect(() => {
         if (amount > 1) {
             if (AmountInp.current) {
-                console.log("Anim star");
                 startAnimation(AmountInp.current);
             }
         }

@@ -18,7 +18,9 @@ function Header() {
             className=" bg-gray-100 flex justify-between padding"
             ref={HeaderEl}
         >
-            <Link to="/react_projects">MyProjects</Link>
+            <Link to="/react_projects" className=" text-xl font-semibold">
+                MyProjects
+            </Link>
             <button>Login</button>
         </header>
     );

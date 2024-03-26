@@ -3,16 +3,21 @@ import "./index.css";
 import Form from "./components/Form";
 import Result from "./components/Result";
 import { useEffect, useMemo, useState } from "react";
-import { useFetch } from "./useFetch";
+import { useFetch } from "../../Hooks/useFetch";
 
 function index() {
     const { mainHeight = "100%" } = useSelector((s) => s.components);
+    const { header } = useSelector((s) => s.components);
+    if (header) {
+        header.children[0].textContent = "REST_Countries_API";
+    }
+
     const [amount, setAmount] = useState();
     const [from, setFrom] = useState("");
     const [to, setTo] = useState("");
     const [result, setResult] = useState({});
 
-    const key = "fca_live_ft24uMqW8GMCWkUOM90RLq2YmVQW2dbZjMRVPpFE";
+    const key = import.meta.env.VITE_CURRENCY_KEY;
     const urlConverter = `https://api.freecurrencyapi.com/v1/latest`;
     const options = useMemo(
         () => ({

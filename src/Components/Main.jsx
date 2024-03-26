@@ -4,7 +4,7 @@ import { setMainHeight } from "../Store/components";
 import { Route, Routes } from "react-router-dom";
 import Home from "../Pages/0-Home";
 import CurrencyConerter from "../Pages/1-CurrencyConverter";
-import ImageGenerator from "../Pages/2-ImageGenerator";
+import ImageGenerator from "../Pages/2-ImageFılter";
 
 function Main() {
     const { header, mainHeight } = useSelector((s) => s.components);

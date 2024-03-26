@@ -18,7 +18,7 @@ function Footer() {
                 </li>
                 <li>
                     <Link to="/react_projects/image_generator">
-                        Image Generator
+                        Filter Animation
                     </Link>
                 </li>
                 <li>
