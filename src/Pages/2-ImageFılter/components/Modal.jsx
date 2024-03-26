@@ -14,7 +14,6 @@ function Modal() {
         vote_average,
         vote_count,
     } = detail;
-    console.log(detail);
 
     return (
         <dialog id="my_modal_2" className="modal">
@@ -38,6 +37,7 @@ function Modal() {
                             if (obj.logo_path) {
                                 return (
                                     <img
+                                        key={obj.name}
                                         title={obj.name}
                                         src={`https://image.tmdb.org/t/p/w500/${obj.logo_path}`}
                                         alt={obj.name}
@@ -55,25 +55,31 @@ function Modal() {
                                 ind === production_countries.length - 1
                             ) {
                                 return (
-                                    <>
+                                    <div key={obj.name}>
                                         <span>and </span>
                                         <span className=" underline underline-offset-2 px-1">
                                             {obj.name}
                                         </span>
-                                    </>
+                                    </div>
                                 );
                             } else if (
                                 production_countries.length > 2 &&
                                 ind < production_countries.length - 2
                             ) {
                                 return (
-                                    <span className=" underline underline-offset-2 px-1">
+                                    <span
+                                        key={obj.name}
+                                        className=" underline underline-offset-2 px-1"
+                                    >
                                         {obj.name},{" "}
                                     </span>
                                 );
                             }
                             return (
-                                <span className=" underline underline-offset-2 px-1">
+                                <span
+                                    key={obj.name}
+                                    className=" underline underline-offset-2 px-1"
+                                >
                                     {obj.name}{" "}
                                 </span>
                             );
@@ -86,7 +92,7 @@ function Modal() {
                         </span>
                     </p>
                     <p className=" text-end">
-                        {vote_average.toFixed(1)} Avarage by {vote_count} votes
+                        {vote_average?.toFixed(1)} Avarage by {vote_count} votes
                     </p>
                 </div>
             </div>

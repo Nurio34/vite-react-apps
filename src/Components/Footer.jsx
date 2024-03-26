@@ -21,6 +21,11 @@ function Footer() {
                         Filter Animation
                     </Link>
                 </li>
+                <li>
+                    <Link to="/react_projects/instagram_filters">
+                        Instagram Filters
+                    </Link>
+                </li>
             </ul>
         </footer>
     );

@@ -1,0 +1,38 @@
+.InstagramFilter {
+    .Image {
+    }
+    .TransBtn {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        font-weight: 500;
+        color: white;
+        transition: 0.2s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: rgba(255, 255, 255, 0.3);
+            transform-origin: center;
+            transform: scaleX(0);
+            transition: 0.2s;
+        }
+
+        &:hover::before {
+            transform: scaleX(1);
+        }
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        &:active {
+            transform: scale(1);
+        }
+    }
+}

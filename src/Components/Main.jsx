@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../Pages/0-Home";
 import CurrencyConerter from "../Pages/1-CurrencyConverter";
 import FilterAnimation from "../Pages/2-ImageFılter";
+import InstagramFilter from "../Pages/3-InstagramFılters";
 
 function Main() {
     const { header, mainHeight } = useSelector((s) => s.components);
@@ -38,6 +39,10 @@ function Main() {
                 <Route
                     path="/react_projects/filter_animation"
                     element={<FilterAnimation />}
+                />
+                <Route
+                    path="/react_projects/instagram_filters"
+                    element={<InstagramFilter />}
                 />
             </Routes>
         </main>
