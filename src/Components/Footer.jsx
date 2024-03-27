@@ -26,6 +26,9 @@ function Footer() {
                         Instagram Filters
                     </Link>
                 </li>
+                <li>
+                    <Link to="/react_projects/coins_app">Coins App</Link>
+                </li>
             </ul>
         </footer>
     );
