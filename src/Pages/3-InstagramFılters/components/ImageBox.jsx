@@ -1,8 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useGlobalContext } from "..";
+import "../../../instagram.min.css";
 
 function ImageBox() {
-    const [imageSrc, setImageSrc] = useState();
-    console.log(imageSrc);
+    const { imageSrc, setImageSrc, ImageEl } = useGlobalContext();
+
     const FileInput = useRef();
 
     const uploadFile = () => {
@@ -16,10 +18,22 @@ function ImageBox() {
         setImageSrc(url);
     };
 
+    // ! ------------------------------------------
+
+    const { instaFilter } = useGlobalContext();
+    const { customFilterCSS } = useGlobalContext();
+
     return (
         <div className="ImageBox aspect-square bg-gray-500 grid place-content-center rounded-md">
             {imageSrc ? (
-                <figure className="w-full h-full aspect-square p-[4vw]">
+                <figure
+                    className={`${instaFilter} w-full h-full aspect-square`}
+                    style={{ filter: customFilterCSS }}
+                    ref={ImageEl}
+                    onDoubleClick={(e) => {
+                        setImageSrc("");
+                    }}
+                >
                     <img
                         src={imageSrc}
                         alt=""
@@ -41,6 +55,7 @@ function ImageBox() {
                         ref={FileInput}
                         onChange={handleImage}
                         accept="image/*"
+                        multiple
                     />
                 </label>
             )}
