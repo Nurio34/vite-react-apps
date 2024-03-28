@@ -26,6 +26,7 @@ export const useFetch = (url, options) => {
 
     useEffect(() => {
         fetchData();
+        console.log("fetch...");
     }, [fetchData]);
 
     return { data, loading, error };

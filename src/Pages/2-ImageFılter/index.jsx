@@ -4,6 +4,7 @@ import React, {
     useMemo,
     useState,
     createContext,
+    memo,
 } from "react";
 import { useSelector } from "react-redux";
 import { useFetch } from "../../Hooks/useFetch";
@@ -43,10 +44,10 @@ function Index() {
         [],
     );
     const { data, loading, error } = useFetch(url, options);
-
+    console.log(data);
     useEffect(() => {
         if (data) {
-            setMovies((pre) => [...pre, [...data?.results]]);
+            setMovies((pre) => [...pre, [...data.results]]);
         }
     }, [data]);
 
@@ -73,4 +74,4 @@ function Index() {
     );
 }
 
-export default Index;
+export default memo(Index);

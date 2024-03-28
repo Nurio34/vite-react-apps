@@ -27,7 +27,7 @@ function Footer() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/react_projects/coins_app">Coins App</Link>
+                    <Link to="/react_projects/new">New</Link>
                 </li>
             </ul>
         </footer>
