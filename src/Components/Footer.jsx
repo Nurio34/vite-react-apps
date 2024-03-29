@@ -27,7 +27,9 @@ function Footer() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/react_projects/new">New</Link>
+                    <Link to="/react_projects/unsplash_search">
+                        Unsplash Search
+                    </Link>
                 </li>
             </ul>
         </footer>
