@@ -7,6 +7,7 @@ import CurrencyConerter from "../Pages/1-CurrencyConverter";
 import FilterAnimation from "../Pages/2-ImageFılter";
 import InstagramFilter from "../Pages/3-InstagramFılters";
 import UnsplashSearch from "../Pages/4-UnsplashSearch";
+import BIST from "../Pages/5-BIST";
 
 function Main() {
     const { header, mainHeight } = useSelector((s) => s.components);
@@ -50,6 +51,7 @@ function Main() {
                     path="/react_projects/unsplash_search"
                     element={<UnsplashSearch />}
                 />
+                <Route path="/react_projects/bist/*" element={<BIST />} />
             </Routes>
         </main>
     );

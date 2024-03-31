@@ -31,6 +31,9 @@ function Footer() {
                         Unsplash Search
                     </Link>
                 </li>
+                <li>
+                    <Link to="/react_projects/bist">Unsplash Search</Link>
+                </li>
             </ul>
         </footer>
     );
