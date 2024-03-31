@@ -32,7 +32,7 @@ function Footer() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/react_projects/bist">Unsplash Search</Link>
+                    <Link to="/react_projects/bist">BIST</Link>
                 </li>
             </ul>
         </footer>
