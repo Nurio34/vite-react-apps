@@ -33,7 +33,7 @@ export const examine_increments = (stocks, category, year) => {
         return {
             id: obj.id,
             [category]: obj.financials
-                .filter((obj, ind) => ind < year)
+                .filter((obj, ind) => ind <= year)
                 .map((obj) => obj[category]),
         };
     });
@@ -58,6 +58,6 @@ export const examine_increments = (stocks, category, year) => {
             ).toFixed(2),
         };
     });
-
+    console.log({ data: sales });
     return { data: sales };
 };

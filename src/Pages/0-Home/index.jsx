@@ -1,11 +1,11 @@
-import pdf1_1 from "../../assets/pdf1-10.png";
+// import pdf1_1 from "../../assets/pdf1-10.png";
 import Tesseract from "tesseract.js";
 import pdf1_5_img from "../../assets/pdf1-5-img.png";
 import pdf1_6_img from "../../assets/pdf1-6-img.png";
 import pdf1_7_img from "../../assets/pdf1-7-img.png";
 
 function index() {
-    console.log(Tesseract);
+    // console.log(Tesseract);
 
     // Tesseract.recognize(pdf1_1, "eng", { logger: (e) => console.log(e) }).then(
     //     (out) => {
