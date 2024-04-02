@@ -7,28 +7,26 @@ export const useGlobalContext = () => useContext(GlobalContext);
 
 function GlobalApp({ children }) {
     const [stocks, setStocks] = useState([]);
-    // console.log({ stocks });
 
     const [financialKeys, setFinancialKeys] = useState([]);
     const [increments, setIncrements] = useState([]);
-    console.log(increments);
 
     const [netSales, setNetSales] = useState([]);
     const [ebidta, setEbidta] = useState([]);
     const [netProfit, setNetProfit] = useState([]);
     const [equity, setEquity] = useState([]);
     const [totalAssets, setTotalAssets] = useState([]);
+    console.log(netSales);
 
     const [netSalesRanks, setNetSalesRanks] = useState([]);
-    // console.log({ netSales });
     const [ebidtaRanks, setEbidtaRanks] = useState([]);
     const [netProfitRanks, setNetProfitRanks] = useState([]);
     const [equityRanks, setEquityRanks] = useState([]);
     const [totalAssetsRanks, setTotalAssetsRanks] = useState([]);
 
     const [currentIndicator, setCurrentIndicator] = useState("alphabetic");
-    const [years, setYears] = useState(6);
-    console.log(years);
+    const [years, setYears] = useState(1);
+    const [sortBy, setSortBy] = useState([]);
 
     useEffect(() => {
         setStocks(data);
@@ -45,20 +43,24 @@ function GlobalApp({ children }) {
     }, [stocks]);
 
     useEffect(() => {
+        const Arr = [];
         financialKeys.forEach((key) => {
-            setIncrements((pre) => [
-                ...pre,
-                examine_increments(stocks, key, years),
-            ]);
+            Arr.push(examine_increments(stocks, key, years));
         });
+        setIncrements(Arr);
     }, [financialKeys, years]);
 
     useEffect(() => {
         setNetSales(
-            increments.filter((obj) =>
-                obj.data.every((obj) => Object.keys(obj)[1] === "net_sales"),
+            increments.filter(
+                (obj) =>
+                    obj.data.every(
+                        (obj) => Object.keys(obj)[1] === "net_sales",
+                    ),
+                // todo burda kaldım - name'i dahil et
             ),
         );
+
         setEbidta(
             increments.filter((obj) =>
                 obj.data.every((obj) => Object.keys(obj)[1] === "ebidta"),
@@ -111,6 +113,19 @@ function GlobalApp({ children }) {
                 }),
             );
 
+            setNetSalesRanks((pre) => {
+                return pre.map((object) => {
+                    return {
+                        ...object,
+                        increase: Object.values(
+                            Object.values(netSales[0])[0].filter(
+                                (obj) => obj.id === object.id,
+                            )[0],
+                        )[1],
+                    };
+                });
+            });
+
             const sortedEbidtaRanks = ebidta[0].data
                 .slice()
                 .sort((obj1, obj2) => {
@@ -132,6 +147,19 @@ function GlobalApp({ children }) {
                     return { id: obj.id, rank: ind + 1 };
                 }),
             );
+
+            setEbidtaRanks((pre) => {
+                return pre.map((object) => {
+                    return {
+                        ...object,
+                        increase: Object.values(
+                            Object.values(ebidta[0])[0].filter(
+                                (obj) => obj.id === object.id,
+                            )[0],
+                        )[1],
+                    };
+                });
+            });
 
             const sortedNetProfitRanks = netProfit[0].data
                 .slice()
@@ -155,6 +183,19 @@ function GlobalApp({ children }) {
                 }),
             );
 
+            setNetProfitRanks((pre) => {
+                return pre.map((object) => {
+                    return {
+                        ...object,
+                        increase: Object.values(
+                            Object.values(netProfit[0])[0].filter(
+                                (obj) => obj.id === object.id,
+                            )[0],
+                        )[1],
+                    };
+                });
+            });
+
             const sortedEquityRanks = equity[0].data
                 .slice()
                 .sort((obj1, obj2) => {
@@ -177,6 +218,19 @@ function GlobalApp({ children }) {
                 }),
             );
 
+            setEquityRanks((pre) => {
+                return pre.map((object) => {
+                    return {
+                        ...object,
+                        increase: Object.values(
+                            Object.values(equity[0])[0].filter(
+                                (obj) => obj.id === object.id,
+                            )[0],
+                        )[1],
+                    };
+                });
+            });
+
             const sortedTotalAssetsRanks = totalAssets[0].data
                 .slice()
                 .sort((obj1, obj2) => {
@@ -198,12 +252,41 @@ function GlobalApp({ children }) {
                     return { id: obj.id, rank: ind + 1 };
                 }),
             );
+
+            setTotalAssetsRanks((pre) => {
+                return pre.map((object) => {
+                    return {
+                        ...object,
+                        increase: Object.values(
+                            Object.values(totalAssets[0])[0].filter(
+                                (obj) => obj.id === object.id,
+                            )[0],
+                        )[1],
+                    };
+                });
+            });
         }
     }, [netSales, ebidta, netProfit, equity, totalAssets]);
 
+    useEffect(() => {
+        if (currentIndicator === "alphabetic") {
+            setSortBy(stocks);
+        } else if (currentIndicator === "net_sales") {
+            setSortBy(netSalesRanks);
+        }
+    }, [currentIndicator, stocks]);
+
     return (
         <GlobalContext.Provider
-            value={{ stocks, setStocks, financialKeys, setYears }}
+            value={{
+                stocks,
+                financialKeys,
+                years,
+                setYears,
+                currentIndicator,
+                setCurrentIndicator,
+                sortBy,
+            }}
         >
             {children}
         </GlobalContext.Provider>

@@ -1,11 +1,23 @@
 import { useGlobalContext } from "../GlobalApp";
 
 function Navigation() {
-    const { financialKeys, stocks, setYears } = useGlobalContext();
+    const {
+        financialKeys,
+        stocks,
+        years,
+        setYears,
+        currentIndicator,
+        setCurrentIndicator,
+    } = useGlobalContext();
 
     return (
         <nav className="Navigation padding border-b border-gray-300 shadow-lg">
-            <select name="indicator" id="indicatorSelect">
+            <select
+                name="indicator"
+                id="indicatorSelect"
+                onChange={(e) => setCurrentIndicator(e.target.value)}
+                value={currentIndicator}
+            >
                 <option value="alphabetic">Alfabetik</option>
                 {financialKeys.map((key) => {
                     return (
@@ -28,6 +40,7 @@ function Navigation() {
                 name="years"
                 id="yearsSelect"
                 onChange={(e) => setYears(e.target.value)}
+                value={years}
             >
                 <option value="" disabled>
                     Years
