@@ -7,7 +7,7 @@ function Stocks() {
     // console.log(sortBy);
 
     return (
-        <section className="Stocks">
+        <section className="Stocks grid gap-[4vh] justify-center px-[4vw] py-[4vh]">
             {sortBy.map((stock) => {
                 if (stock.id) {
                     return <Stock key={stock.id} stock={stock} />;

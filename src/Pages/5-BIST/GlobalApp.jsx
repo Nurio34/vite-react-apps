@@ -52,12 +52,8 @@ function GlobalApp({ children }) {
 
     useEffect(() => {
         setNetSales(
-            increments.filter(
-                (obj) =>
-                    obj.data.every(
-                        (obj) => Object.keys(obj)[2] === "net_sales",
-                    ),
-                // todo burda kaldım - name'i dahil et
+            increments.filter((obj) =>
+                obj.data.every((obj) => Object.keys(obj)[2] === "net_sales"),
             ),
         );
 
@@ -266,7 +262,7 @@ function GlobalApp({ children }) {
                 });
             });
         }
-    }, [netSales, ebidta, netProfit, equity, totalAssets]);
+    }, [netSales, ebidta, netProfit, equity, totalAssets, years]);
 
     useEffect(() => {
         if (currentIndicator === "alphabetic") {
@@ -282,7 +278,15 @@ function GlobalApp({ children }) {
         } else if (currentIndicator === "total_assets") {
             setSortBy(totalAssetsRanks);
         }
-    }, [currentIndicator, stocks]);
+    }, [
+        currentIndicator,
+        stocks,
+        netSalesRanks,
+        ebidtaRanks,
+        netProfitRanks,
+        equityRanks,
+        totalAssetsRanks,
+    ]);
 
     return (
         <GlobalContext.Provider
@@ -294,15 +298,10 @@ function GlobalApp({ children }) {
                 currentIndicator,
                 setCurrentIndicator,
                 sortBy,
-                netSales,
                 netSalesRanks,
-                ebidta,
                 ebidtaRanks,
-                netProfit,
                 netProfitRanks,
-                equity,
                 equityRanks,
-                totalAssets,
                 totalAssetsRanks,
             }}
         >
