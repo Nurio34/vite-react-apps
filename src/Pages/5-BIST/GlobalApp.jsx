@@ -28,6 +28,10 @@ function GlobalApp({ children }) {
     const [years, setYears] = useState(1);
     const [sortBy, setSortBy] = useState([]);
 
+    const [search, setSearch] = useState("");
+    const [detailSearch, setDetailSearch] = useState("");
+    console.log(detailSearch);
+
     useEffect(() => {
         setStocks(data);
     }, [data]);
@@ -303,6 +307,10 @@ function GlobalApp({ children }) {
                 netProfitRanks,
                 equityRanks,
                 totalAssetsRanks,
+                search,
+                setSearch,
+                detailSearch,
+                setDetailSearch,
             }}
         >
             {children}
