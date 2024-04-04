@@ -16,13 +16,13 @@ function GlobalApp({ children }) {
     const [netProfit, setNetProfit] = useState([]);
     const [equity, setEquity] = useState([]);
     const [totalAssets, setTotalAssets] = useState([]);
-    console.log(netSales);
 
     const [netSalesRanks, setNetSalesRanks] = useState([]);
     const [ebidtaRanks, setEbidtaRanks] = useState([]);
     const [netProfitRanks, setNetProfitRanks] = useState([]);
     const [equityRanks, setEquityRanks] = useState([]);
     const [totalAssetsRanks, setTotalAssetsRanks] = useState([]);
+    // console.log(netSalesRanks);
 
     const [currentIndicator, setCurrentIndicator] = useState("alphabetic");
     const [years, setYears] = useState(1);
@@ -55,7 +55,7 @@ function GlobalApp({ children }) {
             increments.filter(
                 (obj) =>
                     obj.data.every(
-                        (obj) => Object.keys(obj)[1] === "net_sales",
+                        (obj) => Object.keys(obj)[2] === "net_sales",
                     ),
                 // todo burda kaldım - name'i dahil et
             ),
@@ -63,22 +63,22 @@ function GlobalApp({ children }) {
 
         setEbidta(
             increments.filter((obj) =>
-                obj.data.every((obj) => Object.keys(obj)[1] === "ebidta"),
+                obj.data.every((obj) => Object.keys(obj)[2] === "ebidta"),
             ),
         );
         setNetProfit(
             increments.filter((obj) =>
-                obj.data.every((obj) => Object.keys(obj)[1] === "net_profit"),
+                obj.data.every((obj) => Object.keys(obj)[2] === "net_profit"),
             ),
         );
         setEquity(
             increments.filter((obj) =>
-                obj.data.every((obj) => Object.keys(obj)[1] === "equity"),
+                obj.data.every((obj) => Object.keys(obj)[2] === "equity"),
             ),
         );
         setTotalAssets(
             increments.filter((obj) =>
-                obj.data.every((obj) => Object.keys(obj)[1] === "total_assets"),
+                obj.data.every((obj) => Object.keys(obj)[2] === "total_assets"),
             ),
         );
     }, [increments]);
@@ -109,7 +109,7 @@ function GlobalApp({ children }) {
 
             setNetSalesRanks(
                 sortedNetSalesRanks.map((obj, ind) => {
-                    return { id: obj.id, rank: ind + 1 };
+                    return { id: obj.id, name: obj.name, rank: ind + 1 };
                 }),
             );
 
@@ -121,7 +121,7 @@ function GlobalApp({ children }) {
                             Object.values(netSales[0])[0].filter(
                                 (obj) => obj.id === object.id,
                             )[0],
-                        )[1],
+                        )[2],
                     };
                 });
             });
@@ -144,7 +144,7 @@ function GlobalApp({ children }) {
 
             setEbidtaRanks(
                 sortedEbidtaRanks.map((obj, ind) => {
-                    return { id: obj.id, rank: ind + 1 };
+                    return { id: obj.id, name: obj.name, rank: ind + 1 };
                 }),
             );
 
@@ -156,7 +156,7 @@ function GlobalApp({ children }) {
                             Object.values(ebidta[0])[0].filter(
                                 (obj) => obj.id === object.id,
                             )[0],
-                        )[1],
+                        )[2],
                     };
                 });
             });
@@ -179,7 +179,7 @@ function GlobalApp({ children }) {
 
             setNetProfitRanks(
                 sortedNetProfitRanks.map((obj, ind) => {
-                    return { id: obj.id, rank: ind + 1 };
+                    return { id: obj.id, name: obj.name, rank: ind + 1 };
                 }),
             );
 
@@ -191,7 +191,7 @@ function GlobalApp({ children }) {
                             Object.values(netProfit[0])[0].filter(
                                 (obj) => obj.id === object.id,
                             )[0],
-                        )[1],
+                        )[2],
                     };
                 });
             });
@@ -214,7 +214,7 @@ function GlobalApp({ children }) {
 
             setEquityRanks(
                 sortedEquityRanks.map((obj, ind) => {
-                    return { id: obj.id, rank: ind + 1 };
+                    return { id: obj.id, name: obj.name, rank: ind + 1 };
                 }),
             );
 
@@ -226,7 +226,7 @@ function GlobalApp({ children }) {
                             Object.values(equity[0])[0].filter(
                                 (obj) => obj.id === object.id,
                             )[0],
-                        )[1],
+                        )[2],
                     };
                 });
             });
@@ -249,7 +249,7 @@ function GlobalApp({ children }) {
 
             setTotalAssetsRanks(
                 sortedTotalAssetsRanks.map((obj, ind) => {
-                    return { id: obj.id, rank: ind + 1 };
+                    return { id: obj.id, name: obj.name, rank: ind + 1 };
                 }),
             );
 
@@ -261,7 +261,7 @@ function GlobalApp({ children }) {
                             Object.values(totalAssets[0])[0].filter(
                                 (obj) => obj.id === object.id,
                             )[0],
-                        )[1],
+                        )[2],
                     };
                 });
             });
@@ -273,6 +273,14 @@ function GlobalApp({ children }) {
             setSortBy(stocks);
         } else if (currentIndicator === "net_sales") {
             setSortBy(netSalesRanks);
+        } else if (currentIndicator === "ebidta") {
+            setSortBy(ebidtaRanks);
+        } else if (currentIndicator === "net_profit") {
+            setSortBy(netProfitRanks);
+        } else if (currentIndicator === "equity") {
+            setSortBy(equityRanks);
+        } else if (currentIndicator === "total_assets") {
+            setSortBy(totalAssetsRanks);
         }
     }, [currentIndicator, stocks]);
 
@@ -286,6 +294,16 @@ function GlobalApp({ children }) {
                 currentIndicator,
                 setCurrentIndicator,
                 sortBy,
+                netSales,
+                netSalesRanks,
+                ebidta,
+                ebidtaRanks,
+                netProfit,
+                netProfitRanks,
+                equity,
+                equityRanks,
+                totalAssets,
+                totalAssetsRanks,
             }}
         >
             {children}
