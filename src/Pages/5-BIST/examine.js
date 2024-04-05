@@ -59,8 +59,14 @@ export const examine_increments = (stocks, category, year) => {
             id: obj.id,
             name: obj.name,
 
+            // [category]: (
+            //     (obj[category][0] / obj[category][1]) * 100 -
+            //     100
+            // ).toFixed(2),
+
             [category]: (
-                (obj[category][0] / obj[category][1]) * 100 -
+                ((obj[category][0] - obj[category][1]) /
+                    Math.abs(obj[category][1])) *
                 100
             ).toFixed(2),
         };

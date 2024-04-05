@@ -21,6 +21,17 @@ function Navigation() {
         e.currentTarget.reset();
     };
 
+    const onChange = (e) => {
+        const search = e.target.value.toLowerCase();
+        const stockEl = search && document.querySelector(`#${search}`);
+
+        if (stockEl) {
+            stockEl.scrollIntoView({ behavior: "smooth" });
+        }
+
+        console.log(search);
+    };
+
     return (
         <nav className="Navigation py-[2vh] px-[8vw] border-b border-gray-300 shadow-lg flex  items-center justify-between gap-[4vh]">
             <div className="grid gap-[4vw] sm:flex">
@@ -71,7 +82,7 @@ function Navigation() {
                 </select>
             </div>
 
-            <Search onSubmit={onSubmit} />
+            <Search onSubmit={onSubmit} onChange={onChange} />
         </nav>
     );
 }

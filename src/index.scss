@@ -45,6 +45,10 @@
     }
 }
 
-.Header {
+.header {
     @apply font-bold text-2xl capitalize;
+}
+
+.button {
+    @apply px-[4vw] py-[1vw] rounded-md;
 }

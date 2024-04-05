@@ -20,9 +20,12 @@ function Stock({ stock }) {
     const navigate = useNavigate();
 
     return (
-        <article className="bg-gray-100 w-screen px-[4vw] py-[2vh]  max-w-[768px] grid">
+        <article
+            className="bg-gray-100 w-screen px-[4vw] py-[2vh]  max-w-[768px] grid"
+            id={id}
+        >
             <h2
-                className=" Header flex items-end"
+                className=" header flex items-end"
                 style={{ fontVariant: "small-caps" }}
             >
                 <div className=" relative">

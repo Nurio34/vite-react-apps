@@ -30,7 +30,6 @@ function GlobalApp({ children }) {
 
     const [search, setSearch] = useState("");
     const [detailSearch, setDetailSearch] = useState("");
-    console.log(detailSearch);
 
     useEffect(() => {
         setStocks(data);

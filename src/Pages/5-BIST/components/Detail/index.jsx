@@ -6,13 +6,14 @@ import Details from "./components/Details";
 import { useEffect, useState } from "react";
 import { IoArrowBackCircle } from "react-icons/io5";
 import Search from "../Search";
+import { goTopOfPage } from "../../../../functions/goTopOfPage";
 
 function index() {
     const location = useLocation();
     const { stocks, setDetailSearch } = useGlobalContext();
 
     const [stockId, setStockId] = useState(location.state);
-    console.log(stockId);
+
     const stock =
         stocks.length > 0 && stocks.filter((obj) => obj.id === stockId)[0];
 
@@ -28,6 +29,10 @@ function index() {
 
     useEffect(() => setYear(initialYear), [initialYear]);
 
+    useEffect(() => {
+        goTopOfPage();
+    }, []);
+
     const onSubmitFn = (e) => {
         e.preventDefault();
         let formData = new FormData(e.currentTarget);
@@ -42,6 +47,8 @@ function index() {
         const search = e.target.value.toLowerCase();
         setStockId(search);
     };
+
+    const [currentTab, setCurrentTab] = useState("");
 
     return (
         <section className="Bist-Detail px-[4vh] py-[4vh] ">
@@ -59,7 +66,7 @@ function index() {
                 <Search onSubmit={onSubmitFn} onChange={onChange} />
             </div>
             <h2
-                className=" Header pt-[4vh]"
+                className=" header pt-[4vh]"
                 style={{ fontVariant: "small-caps" }}
             >
                 <span>{id}</span>
@@ -67,11 +74,17 @@ function index() {
             </h2>
             <article className="py-[1vh]">
                 <div className="Tabs flex flex-wrap">
-                    {tabs?.map((tab) => {
-                        return (
-                            <TabButon key={tab} tab={tab} setYear={setYear} />
-                        );
-                    })}
+                    {tabs.length > 0 &&
+                        tabs.map((tab) => {
+                            return (
+                                <TabButon
+                                    key={tab}
+                                    tab={tab}
+                                    year={year}
+                                    setYear={setYear}
+                                />
+                            );
+                        })}
                 </div>
                 <Details stock={stock} year={year} />
             </article>

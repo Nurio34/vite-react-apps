@@ -3,7 +3,6 @@ import { useGlobalContext } from "../GlobalApp";
 
 function Search({ onSubmit, onChange }) {
     const { stocks } = useGlobalContext();
-    console.log(stocks);
 
     return (
         <form
@@ -21,10 +20,10 @@ function Search({ onSubmit, onChange }) {
                     onChange={onChange}
                 />
                 <datalist id="stockList">
-                    {stocks.map((stock) => {
+                    {stocks.map((stock, ind) => {
                         return (
                             <option
-                                key={stock.id}
+                                key={ind}
                                 value={stock?.id?.toUpperCase()}
                                 className=" capitalize"
                                 style={{ fontVariant: "small-caps" }}
