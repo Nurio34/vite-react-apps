@@ -22,11 +22,12 @@ function GlobalApp({ children }) {
     const [netProfitRanks, setNetProfitRanks] = useState([]);
     const [equityRanks, setEquityRanks] = useState([]);
     const [totalAssetsRanks, setTotalAssetsRanks] = useState([]);
-    // console.log(netSalesRanks);
+    // console.log(stocks);
 
     const [currentIndicator, setCurrentIndicator] = useState("alphabetic");
     const [years, setYears] = useState(1);
     const [sortBy, setSortBy] = useState([]);
+    // console.log(sortBy);
 
     const [search, setSearch] = useState("");
     const [detailSearch, setDetailSearch] = useState("");

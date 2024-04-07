@@ -10,7 +10,7 @@ import { goTopOfPage } from "../../../../functions/goTopOfPage";
 
 function index() {
     const location = useLocation();
-    const { stocks, setDetailSearch } = useGlobalContext();
+    const { stocks } = useGlobalContext();
 
     const [stockId, setStockId] = useState(location.state);
 
@@ -42,13 +42,11 @@ function index() {
         e.currentTarget.reset();
     };
 
-    const onChange = (e) => {
-        console.log(e.target.value);
-        const search = e.target.value.toLowerCase();
-        setStockId(search);
-    };
-
-    const [currentTab, setCurrentTab] = useState("");
+    // const onChange = (e) => {
+    //     console.log(e.target.value);
+    //     const search = e.target.value.toLowerCase();
+    //     setStockId(search);
+    // };
 
     return (
         <section className="Bist-Detail px-[4vh] py-[4vh] ">
@@ -63,7 +61,7 @@ function index() {
                     </span>
                     <span>Hisseler</span>
                 </Link>
-                <Search onSubmit={onSubmitFn} onChange={onChange} />
+                <Search onSubmit={onSubmitFn} />
             </div>
             <h2
                 className=" header pt-[4vh]"
@@ -74,7 +72,8 @@ function index() {
             </h2>
             <article className="py-[1vh]">
                 <div className="Tabs flex flex-wrap">
-                    {tabs.length > 0 &&
+                    {tabs &&
+                        tabs.length > 0 &&
                         tabs.map((tab) => {
                             return (
                                 <TabButon

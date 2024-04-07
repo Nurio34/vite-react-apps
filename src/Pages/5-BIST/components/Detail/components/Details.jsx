@@ -1,8 +1,8 @@
+import { memo, useCallback, useEffect, useMemo } from "react";
 import { goodLookingNumber } from "../../../../../functions/goodLookingNumber";
+import { AiTwotoneCheckCircle, AiTwotoneCloseCircle } from "react-icons/ai";
 
 function Details({ stock, year }) {
-    // console.log(stock);
-
     const financials = stock?.financials?.filter((obj) => obj.year === year)[0];
     const netSales =
         financials && convertMilionToGoodLookingNumber(financials["net_sales"]);
@@ -16,6 +16,7 @@ function Details({ stock, year }) {
     const totalAssets =
         financials &&
         convertMilionToGoodLookingNumber(financials["total_assets"]);
+
     function convertMilionToGoodLookingNumber(num) {
         if (num) {
             const parts = num && num.toString().split(".");
@@ -51,6 +52,27 @@ function Details({ stock, year }) {
     const fd_sales = valuation && valuation["fd/sales"];
     const fd_ebidta = valuation && valuation["fd/ebidta"];
     const eps = valuation && valuation["eps"];
+
+    console.log(stock);
+
+    const regularIncreasing = useCallback(
+        (category) => {
+            const financials = stock?.financials?.map((obj) => obj[category]);
+            let status = true;
+
+            financials.forEach((num, ind) => {
+                if (ind !== financials.length - 1) {
+                    if (num - financials[ind + 1] < 0) {
+                        console.log(num - financials[ind + 1]);
+                        status = false;
+                    }
+                }
+            });
+
+            return status;
+        },
+        [stock],
+    );
 
     return (
         <div className=" py-[4vh] grid gap-[4vh] md:flex md:flex-wrap">
@@ -171,8 +193,147 @@ function Details({ stock, year }) {
                     <span>{eps}</span>
                 </p>
             </div>
+
+            <div className=" bg-orange-100 py-[2vh] px-[4vw] grow">
+                <div>
+                    <ul className=" list-disc list-inside grid gap-[1vh]">
+                        <h2 className=" flex items-center justify-between">
+                            <span className=" font-semibold text-xl">
+                                Düzenli Artış Var mı ?
+                            </span>
+                            <select
+                                name="year"
+                                id="yearSelect"
+                                className=" p-1"
+                            >
+                                <option value="">Year</option>
+                                <option value="">Year</option>
+                                <option value="">Year</option>
+                            </select>
+                        </h2>
+                        <li className=" grid grid-cols-[80px,1fr] md:grid-cols-[90px,1fr] items-center">
+                            <span className="text-sm md:text-base">
+                                Net Satışlar
+                            </span>
+                            <span>
+                                {regularIncreasing("net_sales") ? (
+                                    <AiTwotoneCheckCircle
+                                        color="green"
+                                        size={24}
+                                        style={{
+                                            filter: "drop-shadow(0 0 4px green)",
+                                        }}
+                                    />
+                                ) : (
+                                    <AiTwotoneCloseCircle
+                                        color="red"
+                                        size={24}
+                                        style={{
+                                            filter: "drop-shadow(0 0 4px red)",
+                                        }}
+                                    />
+                                )}
+                            </span>
+                        </li>
+                        <li className=" grid grid-cols-[80px,1fr] md:grid-cols-[90px,1fr] items-center">
+                            <span className="text-sm md:text-base">Favök</span>
+                            <span>
+                                {regularIncreasing("ebidta") ? (
+                                    <AiTwotoneCheckCircle
+                                        color="green"
+                                        size={24}
+                                        style={{
+                                            filter: "drop-shadow(0 0 4px green)",
+                                        }}
+                                    />
+                                ) : (
+                                    <AiTwotoneCloseCircle
+                                        color="red"
+                                        size={24}
+                                        style={{
+                                            filter: "drop-shadow(0 0 4px red)",
+                                        }}
+                                    />
+                                )}
+                            </span>
+                        </li>
+                        <li className=" grid grid-cols-[80px,1fr] md:grid-cols-[90px,1fr] items-center">
+                            <span className="text-sm md:text-base">
+                                Net Kar
+                            </span>
+                            <span>
+                                {regularIncreasing("net_profit") ? (
+                                    <AiTwotoneCheckCircle
+                                        color="green"
+                                        size={24}
+                                        style={{
+                                            filter: "drop-shadow(0 0 4px green)",
+                                        }}
+                                    />
+                                ) : (
+                                    <AiTwotoneCloseCircle
+                                        color="red"
+                                        size={24}
+                                        style={{
+                                            filter: "drop-shadow(0 0 4px red)",
+                                        }}
+                                    />
+                                )}
+                            </span>
+                        </li>
+                        <li className=" grid grid-cols-[80px,1fr] md:grid-cols-[90px,1fr] items-center">
+                            <span className="text-sm md:text-base">
+                                Özkaynaklar
+                            </span>
+                            <span>
+                                {regularIncreasing("equity") ? (
+                                    <AiTwotoneCheckCircle
+                                        color="green"
+                                        size={24}
+                                        style={{
+                                            filter: "drop-shadow(0 0 4px green)",
+                                        }}
+                                    />
+                                ) : (
+                                    <AiTwotoneCloseCircle
+                                        color="red"
+                                        size={24}
+                                        style={{
+                                            filter: "drop-shadow(0 0 4px red)",
+                                        }}
+                                    />
+                                )}
+                            </span>
+                        </li>
+                        <li className=" grid grid-cols-[80px,1fr] md:grid-cols-[90px,1fr] items-center">
+                            <span className="text-sm md:text-base">
+                                Aktifler
+                            </span>
+                            <span>
+                                {regularIncreasing("total_assets") ? (
+                                    <AiTwotoneCheckCircle
+                                        color="green"
+                                        size={24}
+                                        style={{
+                                            filter: "drop-shadow(0 0 4px green)",
+                                        }}
+                                    />
+                                ) : (
+                                    <AiTwotoneCloseCircle
+                                        color="red"
+                                        size={24}
+                                        style={{
+                                            filter: "drop-shadow(0 0 4px red)",
+                                        }}
+                                    />
+                                )}
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     );
 }
 
-export default Details;
+export default memo(Details);
