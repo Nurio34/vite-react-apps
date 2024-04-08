@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useGlobalContext } from "../../GlobalApp";
 import Stock from "./components/Stock";
 import { FaArrowAltCircleUp } from "react-icons/fa";
-import { goTopOfPage } from "../../../../functions/goTopOfPage";
+import { goTopOfPage } from "../../../../functions/functions/goTopOfPage";
 
 function Stocks() {
     const { sortBy } = useGlobalContext();

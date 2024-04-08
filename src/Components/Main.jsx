@@ -8,6 +8,7 @@ import FilterAnimation from "../Pages/2-ImageFılter";
 import InstagramFilter from "../Pages/3-InstagramFılters";
 import UnsplashSearch from "../Pages/4-UnsplashSearch";
 import BIST from "../Pages/5-BIST";
+import MarkdownBlog from "../Pages/6-MarkdownBlog";
 
 function Main() {
     const { header, mainHeight } = useSelector((s) => s.components);
@@ -52,6 +53,10 @@ function Main() {
                     element={<UnsplashSearch />}
                 />
                 <Route path="/react_projects/bist/*" element={<BIST />} />
+                <Route
+                    path="/react_projects/markdownblog/*"
+                    element={<MarkdownBlog />}
+                />
             </Routes>
         </main>
     );

@@ -1,5 +1,5 @@
 import { memo, useCallback, useEffect, useMemo } from "react";
-import { goodLookingNumber } from "../../../../../functions/goodLookingNumber";
+import { goodLookingNumber } from "../../../../../functions/functions/goodLookingNumber";
 import { AiTwotoneCheckCircle, AiTwotoneCloseCircle } from "react-icons/ai";
 
 function Details({ stock, year }) {
@@ -53,8 +53,6 @@ function Details({ stock, year }) {
     const fd_ebidta = valuation && valuation["fd/ebidta"];
     const eps = valuation && valuation["eps"];
 
-    console.log(stock);
-
     const regularIncreasing = useCallback(
         (category) => {
             const financials = stock?.financials?.map((obj) => obj[category]);
@@ -63,7 +61,6 @@ function Details({ stock, year }) {
             financials.forEach((num, ind) => {
                 if (ind !== financials.length - 1) {
                     if (num - financials[ind + 1] < 0) {
-                        console.log(num - financials[ind + 1]);
                         status = false;
                     }
                 }

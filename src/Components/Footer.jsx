@@ -34,6 +34,9 @@ function Footer() {
                 <li>
                     <Link to="/react_projects/bist">BIST</Link>
                 </li>
+                <li>
+                    <Link to="/react_projects/markdownblog">Markdown Blog</Link>
+                </li>
             </ul>
         </footer>
     );
