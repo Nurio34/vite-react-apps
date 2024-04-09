@@ -25,9 +25,9 @@ function Shape({ shapeRange, animationTime, backgroundColors }) {
         <div
             className="shape absolute w-16 aspect-square"
             style={{
-                bottom: 0,
+                bottom: "0",
                 left: `${leftPosition}%`,
-                top: `${topPosition}%`,
+                // // top: `${topPosition}%`,
                 background: backgroundColors[randomBg],
                 borderRadius: `${randomShapeRange - shapeRange}%`,
                 "--second": `${randomTime + animationTime}s`,
