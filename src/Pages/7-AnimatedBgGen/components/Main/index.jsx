@@ -38,112 +38,102 @@ function index() {
 
     const codeBgColor = isThemeLight ? "rgb(191,219,254)" : "rgb(30,58,138)";
 
-    const markdownText = (name) => {
-        return `
-    \`\`\`javascript
-    export function greet(name) {
-      return \`Hello, \${name}!\`;
-    }
-    
-    console.log(greet('${name}'));
-    \`\`\`
-    `;
-    };
-
     const parentCode = () => {
-        return `
+        return ` 
+Parent.jsx
+\`\`\`jsx
+import Shape from "./Shape.jsx"
 
-    import Shape from "./Shape.jsx"
+function Parent() {
+    return <div className="parent" style={{opacity:${
+        opacity / 10
+    }, backgroundColor:"${codeBgColor}"}}>
+    {[...Array(+${shapeAmount})].map((_, index) => {
+        return (
+            <Shape
+                key={index}
+                shapeRange={${shapeRange}}
+                animationTime={${animationTime}}
+                colors={[${[
+                    ...backgroundColors.map((item) => item && '"' + item + '"'),
+                ]}]}
 
-    function Parent() {
+            />
+        );
+    })}
+</div>
+}
 
-        return <div className="parent" style={{opacity:${
-            opacity / 10
-        }, backgroundColor:"${codeBgColor}"}}>
-
-        {[...Array(+${shapeAmount})].map((_, index) => {
-            return (
-                <Shape
-                    key={index}
-                    shapeRange={${shapeRange}}
-                    animationTime={${animationTime}}
-                    colors={[${[
-                        ...backgroundColors.map(
-                            (item) => item && '"' + item + '"',
-                        ),
-                    ]}]}
-
-                />
-            );
-        })}
-    </div>
-    }
-
-    export default Parent
-    
-        `;
+export default Parent
+\`\`\`
+    `;
     };
 
     const componentCode = () => {
         return `
-    import {useState,useEffect} from "react"    
-    import "./index.scss";
+Shape.jsx
 
-    function Shape({ shapeRange, animationTime, colors }) {
-        const [leftPosition, setLeftPosition] = useState(null);
-        const randomLeftPosition = Math.random() * 90;
-        const randomTopPosition = Math.random() * 90;
-        const randomShapeRange = Math.floor(Math.random() * 50);
-        const randomTime = Math.floor(Math.random() * 20);
-        const randomBg = Math.floor(Math.random() * colors.length);
+\`\`\`jsx
+import {useState,useEffect} from "react"    
+import "./index.scss";
 
-        useEffect(() => {
-            setLeftPosition(90 - randomLeftPosition);
-        }, []);
+function Shape({ shapeRange, animationTime, colors }) {
+    const [leftPosition, setLeftPosition] = useState(null);
+    const randomLeftPosition = Math.random() * 90;
+    const randomTopPosition = Math.random() * 90;
+    const randomShapeRange = Math.floor(Math.random() * 50);
+    const randomTime = Math.floor(Math.random() * 20);
+    const randomBg = Math.floor(Math.random() * colors.length);
 
-    return (
-        <div
-            className="shape"
-            style={{
-                bottom: \`-\${10 + randomTopPosition}%\`,
-                left: \`\${leftPosition}%\`,
-                background: colors[randomBg],
-                borderRadius: \`\${randomShapeRange - shapeRange}%\`,
-                "--second": \`\${randomTime * animationTime}s\`,
-            }}
-        ></div>
-    )}
+    useEffect(() => {
+        setLeftPosition(90 - randomLeftPosition);
+    }, []);
 
-    export default Shape
+return (
+    <div
+        className="shape"
+        style={{
+            bottom: \`-\${10 + randomTopPosition}%\`,
+            left: \`\${leftPosition}%\`,
+            background: colors[randomBg],
+            borderRadius: \`\${randomShapeRange - shapeRange}%\`,
+            "--second": \`\${randomTime * animationTime}s\`,
+        }}
+    ></div>
+)}
+
+export default Shape
+\`\`\`
 }        
         `;
     };
 
     const scssCode = () => {
         return `
+index.scss
 
-    .parent {
-        position: absolute;
-        z-index: -1;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-    }
+\`\`\`css
+.parent {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 
-    .shape {
-        position : absolute ;
-        width: 4rem;
-        aspect-ratio: 1;
-        animation: move var(--second) infinite;
+.shape {
+    position : absolute ;
+    width: 4rem;
+    aspect-ratio: 1;
+    animation: move var(--second) infinite;
 
-        @keyframes move {
-            to {
-                bottom : 120%;
-            }
+    @keyframes move {
+        to {
+            bottom : 120%;
         }
     }
-    
-    
+}
+\`\`\`
         `;
     };
 

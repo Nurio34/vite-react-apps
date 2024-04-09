@@ -33,6 +33,10 @@ function Code({ code }) {
         };
     }, [isCodeCopied]);
 
+    const Div = () => {
+        return <div>Hello</div>;
+    };
+
     return (
         <div
             className={`ParentCode padding max-w-80 max-h-24 overflow-auto relative  ${
@@ -77,7 +81,13 @@ function Code({ code }) {
                 )}
             </AnimatePresence>
 
-            {compiler(code())}
+            {compiler(code(), {
+                overrides: {
+                    Code: {
+                        component: Div,
+                    },
+                },
+            })}
         </div>
     );
 }
