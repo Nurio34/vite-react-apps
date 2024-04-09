@@ -37,6 +37,11 @@ function Footer() {
                 <li>
                     <Link to="/react_projects/markdownblog">Markdown Blog</Link>
                 </li>
+                <li>
+                    <Link to="/react_projects/animatedbggen">
+                        AnimatedBgGen
+                    </Link>
+                </li>
             </ul>
         </footer>
     );

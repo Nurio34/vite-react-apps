@@ -1,6 +1,6 @@
 import { useGlobalContext } from "../../GlobalApp";
 import { Code } from "../../../../assets/icons";
-import ThemeChange from "../../../../functions/components/ThemeChange/ThemeChange";
+import ThemeChange from "./ThemeChange/ThemeChange";
 import { useEffect, useRef } from "react";
 import { typeAnimation } from "../../../../functions/functions/typeAnimation";
 import "../../../../functions/styles/index.css";

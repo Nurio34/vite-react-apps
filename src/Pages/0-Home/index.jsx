@@ -20,7 +20,7 @@ function index() {
 
     return (
         <section>
-            <div>
+            {/* <div>
                 <h1
                     className=" font-bold text-2xl capitalize text-center"
                     style={{ fontVariant: "small-caps" }}
@@ -637,7 +637,7 @@ function index() {
                     An sential motive 10 lear. Contemporary Educational
                     Psychology, 25.82:91
                 </p>
-            </div>
+            </div> */}
         </section>
     );
 }
