@@ -12,7 +12,6 @@ function index() {
     const [shapeRange, setShapeRange] = useState(10);
 
     const [animationTime, setAnimationTime] = useState(1);
-
     const [backgroundColor, setBackgroundColor] = useState("#ffffff");
     const [backgroundColors, setBackgroundColors] = useState([]);
 
@@ -37,7 +36,7 @@ function index() {
 
     const [opacity, setOpacity] = useState(10);
 
-    const codeBgColor = isThemeLight ? "white" : "blue";
+    const codeBgColor = isThemeLight ? "rgb(191,219,254)" : "rgb(30,58,138)";
 
     const markdownText = (name) => {
         return `
@@ -56,7 +55,7 @@ function index() {
 
     import Shape from "./Shape.jsx"
 
-    export function Parent() {
+    function Parent() {
 
         return <div className="parent" style={{opacity:${
             opacity / 10
@@ -93,29 +92,29 @@ function index() {
     function Shape({ shapeRange, animationTime, colors }) {
         const [leftPosition, setLeftPosition] = useState(null);
         const randomLeftPosition = Math.random() * 90;
-        const [topPosition, setTopPosition] = useState(null);
         const randomTopPosition = Math.random() * 90;
         const randomShapeRange = Math.floor(Math.random() * 50);
-        const randomTime = Math.floor(Math.random() * 10);
+        const randomTime = Math.floor(Math.random() * 20);
         const randomBg = Math.floor(Math.random() * colors.length);
 
         useEffect(() => {
             setLeftPosition(90 - randomLeftPosition);
-            setTopPosition(200 - randomTopPosition);
         }, []);
 
     return (
         <div
             className="shape"
             style={{
-                bottom: 0,
+                bottom: \`-\${10 + randomTopPosition}%\`,
                 left: \`\${leftPosition}%\`,
                 background: colors[randomBg],
                 borderRadius: \`\${randomShapeRange - shapeRange}%\`,
-                "--second": \`\${randomTime + animationTime}s\`,
+                "--second": \`\${randomTime * animationTime}s\`,
             }}
         ></div>
-    );
+    )}
+
+    export default Shape
 }        
         `;
     };
@@ -139,7 +138,7 @@ function index() {
 
         @keyframes move {
             to {
-                transform: translateY(-2000%);
+                bottom : 120%;
             }
         }
     }

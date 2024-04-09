@@ -1,19 +1,37 @@
 import { compiler } from "markdown-to-jsx";
 import { useGlobalContext } from "../../../GlobalApp";
 import { BsCopy } from "react-icons/bs";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Code({ code }) {
     const { isThemeLight } = useGlobalContext();
 
     const CodeElement = useRef();
 
+    const [isCodeCopied, setIsCodeCopied] = useState(false);
+
     function copyCode() {
         if (CodeElement.current) {
             const code = CodeElement.current.querySelector("code").textContent;
             navigator.clipboard.writeText(code);
+            setIsCodeCopied(true);
         }
     }
+
+    useEffect(() => {
+        let time;
+
+        if (isCodeCopied) {
+            time = setTimeout(() => {
+                setIsCodeCopied(false);
+            }, 1000);
+        }
+
+        return () => {
+            clearTimeout(time);
+        };
+    }, [isCodeCopied]);
 
     return (
         <div
@@ -36,6 +54,29 @@ function Code({ code }) {
                 }}
                 onClick={copyCode}
             />
+
+            <AnimatePresence>
+                {isCodeCopied && (
+                    <motion.div
+                        className=" bg-green-500 text-white absolute right-0 p-1 rounded-md"
+                        initial={{
+                            x: -16,
+                            opacity: 0,
+                        }}
+                        animate={{
+                            x: 0,
+                            opacity: 1,
+                        }}
+                        exit={{
+                            x: 16,
+                            opacity: 0,
+                        }}
+                    >
+                        Code Copied
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
             {compiler(code())}
         </div>
     );

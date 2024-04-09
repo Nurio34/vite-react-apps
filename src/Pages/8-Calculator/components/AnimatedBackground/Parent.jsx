@@ -1,14 +1,17 @@
-import Shape from "./Shape";
+import Shape from "./Shape.jsx";
 
 export function Parent() {
     return (
-        <div className="parent" style={{ opacity: 1, backgroundColor: "blue" }}>
-            {[...Array(+20)].map((_, index) => {
+        <div
+            className="parent"
+            style={{ opacity: 1, backgroundColor: "rgb(30,58,138)" }}
+        >
+            {[...Array(+100)].map((_, index) => {
                 return (
                     <Shape
                         key={index}
-                        shapeRange={10}
-                        animationTime={1}
+                        shapeRange={0}
+                        animationTime={10}
                         colors={[
                             "red",
                             "green",
@@ -20,6 +23,7 @@ export function Parent() {
                             "white",
                             "gray",
                             "black",
+                            "#73ff00",
                         ]}
                     />
                 );

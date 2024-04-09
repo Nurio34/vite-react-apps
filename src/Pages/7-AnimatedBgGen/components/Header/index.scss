@@ -1,0 +1,9 @@
+.AnimatedBgGen-SuggestBtn {
+    animation: light 1s infinite alternate;
+    @keyframes light {
+        to {
+            filter: drop-shadow(0 0 2px var(--filter))
+                drop-shadow(0 0 4px var(--filter));
+        }
+    }
+}

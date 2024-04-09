@@ -10,11 +10,11 @@
     position: absolute;
     width: 4rem;
     aspect-ratio: 1;
-    bottom: 0;
     animation: move var(--second) infinite;
-}
-@keyframes move {
-    to {
-        bottom: 150%;
+
+    @keyframes move {
+        to {
+            bottom: 120%;
+        }
     }
 }
