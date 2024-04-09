@@ -42,6 +42,9 @@ function Footer() {
                         AnimatedBgGen
                     </Link>
                 </li>
+                <li>
+                    <Link to="/react_projects/calculator">Calculator</Link>
+                </li>
             </ul>
         </footer>
     );

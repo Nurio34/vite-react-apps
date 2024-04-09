@@ -54,13 +54,13 @@ function index() {
     const parentCode = () => {
         return `
 
-    import React, { useEffect, useState } from "react";
+    import Shape from "./Shape.jsx"
 
     export function Parent() {
 
         return <div className="parent" style={{opacity:${
             opacity / 10
-        }, backgroundColor:${codeBgColor}}}>
+        }, backgroundColor:"${codeBgColor}"}}>
 
         {[...Array(+${shapeAmount})].map((_, index) => {
             return (
@@ -87,16 +87,17 @@ function index() {
 
     const componentCode = () => {
         return `
-    import "./index.css";
+    import {useState,useEffect} from "react"    
+    import "./index.scss";
 
-    function Shape({ shapeRange, animationTime, backgroundColors }) {
+    function Shape({ shapeRange, animationTime, colors }) {
         const [leftPosition, setLeftPosition] = useState(null);
         const randomLeftPosition = Math.random() * 90;
         const [topPosition, setTopPosition] = useState(null);
         const randomTopPosition = Math.random() * 90;
         const randomShapeRange = Math.floor(Math.random() * 50);
         const randomTime = Math.floor(Math.random() * 10);
-        const randomBg = Math.floor(Math.random() * backgroundColors.length);
+        const randomBg = Math.floor(Math.random() * colors.length);
 
         useEffect(() => {
             setLeftPosition(90 - randomLeftPosition);
@@ -105,12 +106,11 @@ function index() {
 
     return (
         <div
-            className="shape absolute w-16 aspect-square"
+            className="shape"
             style={{
                 bottom: 0,
                 left: \`\${leftPosition}%\`,
-                top: \`\${topPosition}%\`,
-                background: backgroundColors[randomBg],
+                background: colors[randomBg],
                 borderRadius: \`\${randomShapeRange - shapeRange}%\`,
                 "--second": \`\${randomTime + animationTime}s\`,
             }}
@@ -136,13 +136,15 @@ function index() {
         width: 4rem;
         aspect-ratio: 1;
         animation: move var(--second) infinite;
-    }
-    
-    @keyframes move {
-        to {
-            transform: translateY(-2000%);
+
+        @keyframes move {
+            to {
+                transform: translateY(-2000%);
+            }
         }
     }
+    
+    
         `;
     };
 

@@ -10,6 +10,7 @@ import UnsplashSearch from "../Pages/4-UnsplashSearch";
 import BIST from "../Pages/5-BIST";
 import MarkdownBlog from "../Pages/6-MarkdownBlog";
 import AnimatedBgGen from "../Pages/7-AnimatedBgGen";
+import Calculator from "../Pages/8-Calculator";
 
 function Main() {
     const { header, mainHeight } = useSelector((s) => s.components);
@@ -61,6 +62,10 @@ function Main() {
                 <Route
                     path="/react_projects/animatedbggen/*"
                     element={<AnimatedBgGen />}
+                />
+                <Route
+                    path="/react_projects/calculator/*"
+                    element={<Calculator />}
                 />
             </Routes>
         </main>
