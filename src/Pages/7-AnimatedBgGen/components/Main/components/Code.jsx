@@ -3,6 +3,7 @@ import { useGlobalContext } from "../../../GlobalApp";
 import { BsCopy } from "react-icons/bs";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import HighlightedCode from "./HighlightedCode";
 
 function Code({ code }) {
     const { isThemeLight } = useGlobalContext();
@@ -33,17 +34,9 @@ function Code({ code }) {
         };
     }, [isCodeCopied]);
 
-    const Div = () => {
-        return <div>Hello</div>;
-    };
-
     return (
         <div
-            className={`ParentCode padding max-w-80 max-h-24 overflow-auto relative  ${
-                isThemeLight
-                    ? " bg-white text-black"
-                    : " bg-gray-800 text-white"
-            }`}
+            className={`ParentCode py-1 px-4 overflow-auto relative `}
             ref={CodeElement}
         >
             <BsCopy
@@ -83,8 +76,8 @@ function Code({ code }) {
 
             {compiler(code(), {
                 overrides: {
-                    Code: {
-                        component: Div,
+                    code: {
+                        component: HighlightedCode,
                     },
                 },
             })}

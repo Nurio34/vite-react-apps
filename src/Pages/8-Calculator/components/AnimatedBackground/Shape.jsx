@@ -21,7 +21,7 @@ function Shape({ shapeRange, animationTime, colors }) {
                 left: `${leftPosition}%`,
                 background: colors[randomBg],
                 borderRadius: `${randomShapeRange - shapeRange}%`,
-                "--second": `${randomTime + animationTime}s`,
+                "--second": `${randomTime * animationTime}s`,
             }}
         ></div>
     );

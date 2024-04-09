@@ -1,6 +1,6 @@
 import Shape from "./Shape.jsx";
 
-export function Parent() {
+function Parent() {
     return (
         <div
             className="parent"
@@ -23,7 +23,6 @@ export function Parent() {
                             "white",
                             "gray",
                             "black",
-                            "#73ff00",
                         ]}
                     />
                 );

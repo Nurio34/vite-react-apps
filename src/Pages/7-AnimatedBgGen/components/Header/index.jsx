@@ -54,7 +54,7 @@ function Header() {
                 <AnimatePresence>
                     {isImgDisplay && (
                         <motion.figure
-                            className=" absolute z-10"
+                            className=" absolute z-50"
                             initial={{
                                 y: -16,
                                 opacity: 0,
