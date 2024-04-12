@@ -18,7 +18,7 @@ function Header() {
             className=" bg-gray-100 flex justify-between padding"
             ref={HeaderEl}
         >
-            <Link to="/react_projects" className=" text-xl font-semibold">
+            <Link to="/vite-react-projects" className=" text-xl font-semibold">
                 MyProjects
             </Link>
             <button>Login</button>

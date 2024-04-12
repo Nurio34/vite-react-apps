@@ -52,3 +52,14 @@
 .button {
     @apply px-[4vw] py-[1vw] rounded-md;
 }
+
+.padding1 {
+    @apply py-[2vh] px-[4vw];
+}
+.padding2 {
+    @apply py-1 px-2;
+}
+
+.font1 {
+    @apply capitalize font-semibold text-lg;
+}

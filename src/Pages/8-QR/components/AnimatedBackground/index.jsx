@@ -1,10 +1,15 @@
+import { useSelector } from "react-redux";
 import Shape from "./Shape.jsx";
+import { useQR } from "../../GlobalApp.jsx";
 
 function Parent() {
     return (
         <div
             className="parent"
-            style={{ opacity: 1, backgroundColor: "rgb(30,58,138)" }}
+            style={{
+                opacity: 0.2,
+                backgroundColor: "rgb(30,58,138)",
+            }}
         >
             {[...Array(+100)].map((_, index) => {
                 return (

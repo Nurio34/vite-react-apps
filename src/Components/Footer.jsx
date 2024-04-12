@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
     return (
-        <footer>
+        <footer className=" bg-white">
             <h2>Projects</h2>
             <ul
                 className=" grid grid-cols-3  py-[1vh] px-[1vw] text-purple-600 underline underline-offset-2 text-xs 
@@ -12,38 +12,40 @@ function Footer() {
             "
             >
                 <li>
-                    <Link to="/react_projects/currency_converter">
+                    <Link to="/vite-react-projects/currency_converter">
                         Currency Converter
                     </Link>
                 </li>
                 <li>
-                    <Link to="/react_projects/filter_animation">
+                    <Link to="/vite-react-projects/filter_animation">
                         Filter Animation
                     </Link>
                 </li>
                 <li>
-                    <Link to="/react_projects/instagram_filters">
+                    <Link to="/vite-react-projects/instagram_filters">
                         Instagram Filters
                     </Link>
                 </li>
                 <li>
-                    <Link to="/react_projects/unsplash_search">
+                    <Link to="/vite-react-projects/unsplash_search">
                         Unsplash Search
                     </Link>
                 </li>
                 <li>
-                    <Link to="/react_projects/bist">BIST</Link>
+                    <Link to="/vite-react-projects/bist">BIST</Link>
                 </li>
                 <li>
-                    <Link to="/react_projects/markdownblog">Markdown Blog</Link>
+                    <Link to="/vite-react-projects/markdownblog">
+                        Markdown Blog
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/react_projects/animatedbggen">
+                    <Link to="/vite-react-projects/animatedbggen">
                         AnimatedBgGen
                     </Link>
                 </li>
                 <li>
-                    <Link to="/react_projects/calculator">Calculator</Link>
+                    <Link to="/vite-react-projects/qr">QR</Link>
                 </li>
             </ul>
         </footer>

@@ -1,0 +1,24 @@
+.QR {
+    .parent {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .shape {
+        position: absolute;
+        width: 4rem;
+        aspect-ratio: 1;
+        animation: move var(--second) infinite;
+
+        @keyframes move {
+            to {
+                bottom: 120%;
+            }
+        }
+    }
+}

@@ -8,7 +8,7 @@
 
 ###### react-router-dom - react-icons - react-loader-spinner - @reduxjs/toolkit - react-redux - framer-motion - axios - express - mongoose
 
-[Click to go Live](https://nurio34.github.io/react_projects/)
+[Click to go Live](https://nurio34.github.io/vite-react-projects/)
 
 ### 1. Currency Converter
 

@@ -10,7 +10,7 @@ import UnsplashSearch from "../Pages/4-UnsplashSearch";
 import BIST from "../Pages/5-BIST";
 import MarkdownBlog from "../Pages/6-MarkdownBlog";
 import AnimatedBgGen from "../Pages/7-AnimatedBgGen";
-import Calculator from "../Pages/8-Calculator";
+import QR from "../Pages/8-QR";
 
 function Main() {
     const { header, mainHeight } = useSelector((s) => s.components);
@@ -36,37 +36,22 @@ function Main() {
     return (
         <main style={{ minHeight: mainHeight }}>
             <Routes>
-                <Route path="/react_projects" element={<Home />} />
+                <Route index element={<Home />} />
                 <Route
-                    path="/react_projects/currency_converter"
+                    path="/currency_converter"
                     element={<CurrencyConerter />}
                 />
+                <Route path="/filter_animation" element={<FilterAnimation />} />
                 <Route
-                    path="/react_projects/filter_animation"
-                    element={<FilterAnimation />}
-                />
-                <Route
-                    path="/react_projects/instagram_filters"
+                    path="/instagram_filters"
                     element={<InstagramFilter />}
                 />
 
-                <Route
-                    path="/react_projects/unsplash_search"
-                    element={<UnsplashSearch />}
-                />
-                <Route path="/react_projects/bist/*" element={<BIST />} />
-                <Route
-                    path="/react_projects/markdownblog/*"
-                    element={<MarkdownBlog />}
-                />
-                <Route
-                    path="/react_projects/animatedbggen/*"
-                    element={<AnimatedBgGen />}
-                />
-                <Route
-                    path="/react_projects/calculator/*"
-                    element={<Calculator />}
-                />
+                <Route path="/unsplash_search" element={<UnsplashSearch />} />
+                <Route path="/bist/*" element={<BIST />} />
+                <Route path="/markdownblog/*" element={<MarkdownBlog />} />
+                <Route path="/animatedbggen/*" element={<AnimatedBgGen />} />
+                <Route path="/qr/*" element={<QR />} />
             </Routes>
         </main>
     );

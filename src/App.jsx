@@ -3,7 +3,7 @@ import Main from "./Components/Main";
 import Footer from "./Components/Footer";
 import { Provider } from "react-redux";
 import { store } from "./Store/store";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
     return (
@@ -11,7 +11,12 @@ function App() {
             <BrowserRouter>
                 <Provider store={store}>
                     <Header />
-                    <Main />
+                    <Routes>
+                        <Route
+                            path="/vite-react-projects/*"
+                            element={<Main />}
+                        />
+                    </Routes>
                     <Footer />
                 </Provider>
             </BrowserRouter>
