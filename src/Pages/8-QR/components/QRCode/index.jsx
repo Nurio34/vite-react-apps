@@ -1,5 +1,6 @@
 import { useQR } from "../../GlobalApp";
 import "./index.scss";
+import { saveAs } from "file-saver";
 
 function QRCode() {
     const { isLoading, data } = useQR();
@@ -12,13 +13,24 @@ function QRCode() {
                         Get your QR Code...
                     </p>
                 ) : data || isLoading ? (
-                    <figure className="w-full aspect-square">
-                        {data && (
-                            <div>
-                                <img src={data} alt="qr code" />
-                            </div>
-                        )}
-                    </figure>
+                    <div className=" grid justify-items-center gap-1">
+                        <figure className="w-full aspect-square">
+                            {data && (
+                                <div>
+                                    <img src={data} alt="qr code" />
+                                </div>
+                            )}
+                        </figure>
+                        <button
+                            type="button"
+                            className="bg-orange-500  text-white padding2"
+                            onClick={(e) => {
+                                saveAs(data, "qr.png");
+                            }}
+                        >
+                            Download
+                        </button>
+                    </div>
                 ) : (
                     ""
                 )}

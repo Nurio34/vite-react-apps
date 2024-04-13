@@ -218,7 +218,7 @@ function Stock({ stock }) {
                 className=" bg-blue-500 text-white justify-self-end px-[4vh] py-[1vh] rounded-md capitalize"
                 style={{ fontVariant: "small-caps" }}
                 onClick={(e) => {
-                    navigate(`/react_projects/bist/detail`, {
+                    navigate(`/vite-react-projects/bist/detail`, {
                         state: id,
                     });
                 }}

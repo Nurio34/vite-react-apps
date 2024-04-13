@@ -52,7 +52,7 @@ function index() {
         <section className="Bist-Detail px-[4vh] py-[4vh] ">
             <div className="flex  items-center justify-between gap-[4vh]">
                 <Link
-                    to="/react_projects/bist"
+                    to="/vite-react-projects/bist"
                     className=" inline-flex gap-[1vw] items-center rounded-md px-[4vw] py-[1vh] bg-blue-500 text-white capitalize"
                     style={{ fontVariant: "small-caps" }}
                 >
