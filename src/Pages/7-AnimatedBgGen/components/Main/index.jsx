@@ -311,7 +311,7 @@ index.scss
 
             <div
                 style={{ opacity: opacity / 10 }}
-                className={`absolute min-w-full min-h-[83vh] overflow-hidden transition -z-1
+                className={`parent
                 ${isThemeLight ? "bg-blue-200" : "bg-blue-900"}
             `}
             >

@@ -15,7 +15,7 @@ function Form() {
                     type="url"
                     name="url"
                     id="url"
-                    className=" padding2 w-full bg-orange-500 rounded-md placeholder:text-black"
+                    className=" padding2 w-full bg-orange-500 rounded-md placeholder:text-white"
                     placeholder="https://example.com"
                     onBlur={(e) =>
                         setBody((pre) => ({ ...pre, url: e.target.value }))

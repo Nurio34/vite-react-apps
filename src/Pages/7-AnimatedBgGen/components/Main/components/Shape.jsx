@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import "./index.scss";
+import "./index.scss";
 
 function Shape({ shapeRange, animationTime, backgroundColors }) {
     const [leftPosition, setLeftPosition] = useState(null);

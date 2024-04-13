@@ -15,4 +15,43 @@
             filter: blur(5px);
         }
     }
+
+    figure {
+        background-image: linear-gradient(90deg, white, gray);
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 0;
+            width: 66%;
+            height: 200%;
+            background-color: rgba(255, 255, 255, 0.2);
+            filter: blur(6px);
+            top: 50%;
+            left: -200%;
+            transform: translate(0, -50%) rotate(45deg);
+            animation: skel 2s infinite;
+
+            @keyframes skel {
+                to {
+                    left: 200%;
+
+                    // transform: translate(100%, -50%) rotate(45deg);
+                }
+            }
+        }
+
+        div {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 234, 238, 1);
+            img {
+                position: relative;
+                z-index: 1;
+                object-fit: fill;
+            }
+        }
+    }
 }
