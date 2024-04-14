@@ -8,7 +8,7 @@ import FilterAnimation from "../Pages/2-ImageFılter";
 import InstagramFilter from "../Pages/3-InstagramFılters";
 import UnsplashSearch from "../Pages/4-UnsplashSearch";
 import BIST from "../Pages/5-BIST";
-import MarkdownBlog from "../Pages/6-MarkdownBlog";
+import ImageToText from "../Pages/6-ImageToText";
 import AnimatedBgGen from "../Pages/7-AnimatedBgGen";
 import QR from "../Pages/8-QR";
 
@@ -49,7 +49,7 @@ function Main() {
 
                 <Route path="/unsplash_search" element={<UnsplashSearch />} />
                 <Route path="/bist/*" element={<BIST />} />
-                <Route path="/markdownblog/*" element={<MarkdownBlog />} />
+                <Route path="/image-to-text/*" element={<ImageToText />} />
                 <Route path="/animatedbggen/*" element={<AnimatedBgGen />} />
                 <Route path="/qr/*" element={<QR />} />
             </Routes>

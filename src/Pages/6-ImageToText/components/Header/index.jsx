@@ -12,23 +12,28 @@ function index() {
 
     useEffect(() => {
         if (LogoElement.current) {
-            typeAnimation("MarkdownBlog", LogoElement.current);
+            typeAnimation("ImageToText", LogoElement.current);
         }
     }, []);
 
     return (
         <header
-            className={` flex justify-between items-center padding transition
-            ${isThemeLight ? "bg-white text-black" : " bg-black text-white"}
+            className={` flex justify-between items-center padding transition border-b-2
+            ${
+                isThemeLight
+                    ? "bg-white text-black border-gray-500"
+                    : " bg-black text-white border-white"
+            }
         `}
         >
             <div className="Logo flex items-center gap-1">
                 <span>
                     <Code />
                 </span>
-                <span className=" font-semibold text-lg" ref={LogoElement}>
-                    MarkDownBlog
-                </span>
+                <span
+                    className=" font-semibold text-lg"
+                    ref={LogoElement}
+                ></span>
             </div>
             <ThemeChange />
         </header>

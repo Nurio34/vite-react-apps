@@ -35,8 +35,8 @@ function Footer() {
                     <Link to="/vite-react-projects/bist">BIST</Link>
                 </li>
                 <li>
-                    <Link to="/vite-react-projects/markdownblog">
-                        Markdown Blog
+                    <Link to="/vite-react-projects/image-to-text">
+                        Image-to-Text
                     </Link>
                 </li>
                 <li>
