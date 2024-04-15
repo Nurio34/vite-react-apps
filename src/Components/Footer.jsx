@@ -47,6 +47,9 @@ function Footer() {
                 <li>
                     <Link to="/vite-react-projects/qr">QR</Link>
                 </li>
+                <li>
+                    <Link to="/vite-react-projects/quiz">Quiz</Link>
+                </li>
             </ul>
         </footer>
     );

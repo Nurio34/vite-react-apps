@@ -8,7 +8,7 @@ import { goodLookingNumber } from "../../../../../functions/functions/goodLookin
 
 function Stock({ stock }) {
     const { id, name, rank, sector, paidInCapital, pfr } = stock;
-    console.log(sector);
+
     const {
         netSalesRanks,
         ebidtaRanks,
