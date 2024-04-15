@@ -4,10 +4,11 @@ import { useNavigate } from "react-router-dom";
 import Rank1_img from "../../../../../assets/Rank1.webp";
 import Rank2_img from "../../../../../assets/Rank2.webp";
 import Rank3_img from "../../../../../assets/Rank3.webp";
+import { goodLookingNumber } from "../../../../../functions/functions/goodLookingNumber";
 
 function Stock({ stock }) {
-    const { id, name, rank } = stock;
-
+    const { id, name, rank, sector, paidInCapital, pfr } = stock;
+    console.log(sector);
     const {
         netSalesRanks,
         ebidtaRanks,
@@ -21,7 +22,7 @@ function Stock({ stock }) {
 
     return (
         <article
-            className="bg-gray-100 w-screen px-[4vw] py-[2vh]  max-w-[768px] grid"
+            className="bg-gray-100 w-screen px-[4vw] py-[2vh]  max-w-[768px] grid grid-cols-[1fr,0.5fr]"
             id={id}
         >
             <h2
@@ -57,7 +58,7 @@ function Stock({ stock }) {
                 </div>
                 <span className=" text-xs pl-[2vw]">{name}</span>
             </h2>
-            <div className=" grid gap-[1vh]">
+            <div className=" row-start-2 grid gap-[1vh]">
                 <p
                     className={` flex items-center ${
                         currentIndicator === "net_sales" &&
@@ -214,9 +215,24 @@ function Stock({ stock }) {
                     </span>
                 </p>
             </div>
-            <button
-                className=" bg-blue-500 text-white justify-self-end px-[4vh] py-[1vh] rounded-md capitalize"
+            <div
+                className="row-start-2 self-start justify-self-end grid text-end  md:font-semibold md:text-lg capitalize underline underline-offset-2"
                 style={{ fontVariant: "small-caps" }}
+            >
+                <span>{sector}</span>
+                <span>{goodLookingNumber(paidInCapital)}</span>
+                <span
+                    className={`underline underline-offset-2 text-sm px-[1px] ${
+                        pfr > 50 ? "text-red-500 " : "text-green-500"
+                    }`}
+                >
+                    <span>%</span>
+
+                    {pfr}
+                </span>
+            </div>
+            <button
+                className=" row-start-3 col-start-2 bg-blue-500 text-white justify-self-end px-[4vh] py-[1vh] rounded-md capitalize"
                 onClick={(e) => {
                     navigate(`/vite-react-projects/bist/detail`, {
                         state: id,
