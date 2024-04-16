@@ -6,7 +6,7 @@ const initialState = {
     difficulty: "",
     type: "",
     amount: "10",
-    score: "",
+    score: 0,
     amountSetting: "api.php?&amount=10",
     categorySetting: "",
     difficultySetting: "",
@@ -29,8 +29,12 @@ const quiz = createSlice({
         setAmount: (state, action) => {
             state.amount = action.payload;
         },
-        setScore: (state, action) => {
-            state.score = action.payload;
+        setScore: (state) => {
+            console.log("ok");
+            state.score = state.score + 1;
+        },
+        resetGame: (state) => {
+            return initialState;
         },
 
         setCategorySetting: (state, action) => {
@@ -62,6 +66,7 @@ export const {
     setType,
     setAmount,
     setScore,
+    resetGame,
     setCategorySetting,
     setDifficultySetting,
     setTypeSetting,
