@@ -1,10 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import useAxios from "../../hooks/useAxios";
 import Amount from "./components/Amount";
 import Selection from "./components/Selection";
+import { useSelector } from "react-redux";
 
 function Settings() {
     const { isLoading, data, error } = useAxios("/api_category.php");
-    console.log({ isLoading, data, error });
 
     const selections = [
         {
@@ -43,7 +44,17 @@ function Settings() {
         },
     ];
 
-    console.log(selections);
+    const { categorySetting, difficultySetting, typeSetting, amountSetting } =
+        useSelector((s) => s.quiz);
+
+    const settings =
+        amountSetting + categorySetting + difficultySetting + typeSetting;
+
+    const navigate = useNavigate();
+    const Start_Quiz = (e) => {
+        e.preventDefault();
+        navigate("/vite-react-projects/quiz/questions", { state: settings });
+    };
 
     return (
         <article className="Settings padding grid gap-[4vh] ">
@@ -53,7 +64,7 @@ function Settings() {
             >
                 Quiz App
             </h1>
-            <form className="grid gap-[2vh]">
+            <form className="grid gap-[2vh]" onSubmit={Start_Quiz}>
                 {selections.map((selection) => (
                     <Selection
                         key={selection.id}

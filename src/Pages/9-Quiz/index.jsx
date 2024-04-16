@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import Settings from "./pages/1-Settings";
 import { Route, Routes } from "react-router-dom";
-import useAxios from "./hooks/useAxios";
+import Settings from "./pages/1-Settings";
+import Quiz from "./pages/2-Quiz";
 
 function QuizApp() {
     const { mainHeight } = useSelector((s) => s.components);
@@ -18,6 +18,7 @@ function QuizApp() {
         >
             <Routes>
                 <Route index element={<Settings />} />
+                <Route path="/questions" element={<Quiz />} />
             </Routes>
         </section>
     );
