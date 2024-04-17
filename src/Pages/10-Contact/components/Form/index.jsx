@@ -7,7 +7,7 @@ function Form() {
 
     return (
         <form
-            className={`grid gap-[0.3vh] md:gap-[4vh] md:pt-[2vw] pt-[1vh] text-white
+            className={`grid gap-[0.3vh]  md:pt-[2vw] pt-[1vh] text-white
             ${currentStep === "contact" && " md:gap-0"}
         `}
         >

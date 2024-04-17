@@ -13,13 +13,20 @@
             height: 101%;
             background-color: rgba(255, 255, 255, 0.1);
             background-image: url("../../../../assets/windowsBg.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: none;
 
             z-index: -1;
-            border-radius: 8px;
+            border-radius: 4px;
+
+            @media (min-width: 768px) {
+                border-radius: 11px;
+            }
         }
 
         &::before {
-            left: -1px;
+            left: -2px;
             transform: skewX(-1deg);
 
             @media (min-width: 768px) {
@@ -27,7 +34,7 @@
             }
         }
         &::after {
-            right: -1px;
+            right: -2px;
             transform: skewX(1deg);
 
             @media (min-width: 768px) {
