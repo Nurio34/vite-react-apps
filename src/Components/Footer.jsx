@@ -50,6 +50,9 @@ function Footer() {
                 <li>
                     <Link to="/vite-react-projects/quiz">Quiz</Link>
                 </li>
+                <li>
+                    <Link to="/vite-react-projects/contact">Contact</Link>
+                </li>
             </ul>
         </footer>
     );

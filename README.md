@@ -56,3 +56,51 @@ Search for a word, find its Image
 ##### API's Used
 
 -   https://api.unsplash.com/search/photos?page="PAGE_NUMBER"&query="SEARCH_QUERY"&client_id="YOUR_API_KEY"
+
+### 5. BIST
+
+##### APP
+
+This app is for my self-usage. I gathered all companies informoation that are in Turkey's stock market, created a data object with their financial, profitability and valuation numbers, created some usefull algorithms to find best companies among them.
+
+### 6. IMAGE-TO-TEXT
+
+##### APP
+
+Upload an image, get the text in it
+
+##### Libraries Used
+
+-   tesseract.js
+
+### 7. ANIMATED BACKGROUND GENERATOR
+
+##### APP
+
+Play with settings, see the changes in background, if you like it, get the code, make it background for your app.
+**_Note : Codes are in "Jsx" and "Scss" format._**
+
+##### Libraries Used
+
+-   markdown-to-jsx
+-   react-syntax-higlighter
+
+### 8. QR CODE GENERATOR
+
+##### APP
+
+Get QR Code for your url in any color and with any image as logo in the middle of it.
+
+##### API's Used
+
+-   https://www.qrcode-tiger.com/api-documentation
+
+### 9. QUIZ
+
+##### APP
+
+Select a category, set other settings and take the quiz. You can skip the category select and take the quiz in mix of all categories
+
+##### API' Used
+
+-   https://opentdb.com/api_config.php

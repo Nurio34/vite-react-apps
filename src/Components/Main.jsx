@@ -12,6 +12,7 @@ import ImageToText from "../Pages/6-ImageToText";
 import AnimatedBgGen from "../Pages/7-AnimatedBgGen";
 import QR from "../Pages/8-QR";
 import Quiz from "../Pages/9-Quiz";
+import Contact from "../Pages/10-Contact";
 
 function Main() {
     const { header, mainHeight } = useSelector((s) => s.components);
@@ -54,6 +55,7 @@ function Main() {
                 <Route path="/animatedbggen/*" element={<AnimatedBgGen />} />
                 <Route path="/qr/*" element={<QR />} />
                 <Route path="/quiz/*" element={<Quiz />} />
+                <Route path="/contact/*" element={<Contact />} />
             </Routes>
         </main>
     );
