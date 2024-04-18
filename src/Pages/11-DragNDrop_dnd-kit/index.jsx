@@ -16,7 +16,7 @@ function DragNDrop() {
                     className=" text-center font-bold text-xl capitalize pt-4"
                     style={{ fontVariant: "small-caps" }}
                 >
-                    Task Menager
+                    Task Menager ( @dnd/toolkit)
                 </h1>
                 <AddTask />
                 <Tasks />

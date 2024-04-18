@@ -54,11 +54,18 @@ function Footer() {
                     <Link to="/vite-react-projects/contact">Contact</Link>
                 </li>
                 <li>
-                    <Link to="/vite-react-projects/dragndrop">Drag-N-Drop</Link>
+                    <Link to="/vite-react-projects/dragndrop">
+                        Drag&Drop(dnd-kit)
+                    </Link>
                 </li>
                 <li>
                     <Link to="/vite-react-projects/cardgenerator">
                         Card Generator
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/vite-react-projects/dragndrop-fm">
+                        Drag&Drop(FramerMotion)
                     </Link>
                 </li>
             </ul>
