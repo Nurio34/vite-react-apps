@@ -1,7 +1,9 @@
 import { createContext, useContext, useState } from "react";
+import { DndContext, closestCorners } from "@dnd-kit/core";
+import { arrayMove } from "@dnd-kit/sortable";
 
-const DndContext = createContext();
-export const useDndContext = () => useContext(DndContext);
+const TasksContext = createContext();
+export const useTasksContext = () => useContext(TasksContext);
 
 function GlobalApp({ children }) {
     const [tasks, setTasks] = useState([
@@ -19,10 +21,31 @@ function GlobalApp({ children }) {
         },
     ]);
 
+    const getTaskPosition = (id) => {
+        return tasks.findIndex((task) => task.id === id);
+    };
+
+    const onDragEnd = (e) => {
+        const { active, over } = e;
+
+        if (active.id === over.id) return;
+
+        setTasks((tasks) => {
+            const startingPosition = getTaskPosition(active.id);
+            const newPosition = getTaskPosition(over.id);
+            return arrayMove(tasks, startingPosition, newPosition);
+        });
+    };
+
     return (
-        <DndContext.Provider value={{ tasks, setTasks }}>
-            {children}
-        </DndContext.Provider>
+        <TasksContext.Provider value={{ tasks, setTasks }}>
+            <DndContext
+                collisionDetection={closestCorners}
+                onDragEnd={onDragEnd}
+            >
+                {children}
+            </DndContext>
+        </TasksContext.Provider>
     );
 }
 

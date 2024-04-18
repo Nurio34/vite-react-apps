@@ -104,3 +104,25 @@ Select a category, set other settings and take the quiz. You can skip the catego
 ##### API' Used
 
 -   https://opentdb.com/api_config.php
+
+### 10. CONTACT FORM
+
+##### APP
+
+A contact form that take the informations and send it to a mail adress you've choosen; in a format that you've already created as a template.
+
+##### Libraries Used
+
+-   email.js
+
+### 11. DRAG & DROP
+
+##### APP
+
+Tasks app to practice Drag & Drop events with "dnd kit" library
+
+##### Libraries Used
+
+-   @dnd-kit/core
+-   @dnd-kit/sortable
+-   @dnd-kit/utilities

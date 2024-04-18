@@ -14,6 +14,7 @@ import QR from "../Pages/8-QR";
 import Quiz from "../Pages/9-Quiz";
 import Contact from "../Pages/10-Contact";
 import DragNDrop from "../Pages/11-DragNDrop";
+import CardGenerator from "../Pages/12-CardGenerator";
 
 function Main() {
     const { header, mainHeight } = useSelector((s) => s.components);
@@ -58,6 +59,7 @@ function Main() {
                 <Route path="/quiz/*" element={<Quiz />} />
                 <Route path="/contact/*" element={<Contact />} />
                 <Route path="/dragndrop/*" element={<DragNDrop />} />
+                <Route path="/cardgenerator/*" element={<CardGenerator />} />
             </Routes>
         </main>
     );

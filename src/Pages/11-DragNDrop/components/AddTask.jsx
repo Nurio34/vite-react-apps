@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useDndContext } from "../GlobalApp";
+import { useTasksContext } from "../GlobalApp";
 
 function AddTask() {
-    const { tasks, setTasks } = useDndContext();
+    const { tasks, setTasks } = useTasksContext();
 
     const [task, setTask] = useState();
 

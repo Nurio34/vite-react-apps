@@ -101,3 +101,5 @@ const çarpanlar = [...document.querySelectorAll(`#carpanlar table tbody tr`)]
             eps: +item[6].split(",").join("") || null,
         };
     });
+
+console.log({ finansallar, karlılık, çarpanlar });
