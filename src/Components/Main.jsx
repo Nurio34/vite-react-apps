@@ -14,8 +14,7 @@ import QR from "../Pages/8-QR";
 import Quiz from "../Pages/9-Quiz";
 import Contact from "../Pages/10-Contact";
 import DragNDrop_DndKit from "../Pages/11-DragNDrop_dnd-kit";
-import CardGenerator from "../Pages/12-CardGenerator";
-import DragNDrop_FramerMotion from "../Pages/13-DragNDrop_FramerMotion";
+import DragNDrop_FramerMotion from "../Pages/12-DragNDrop_FramerMotion";
 
 function Main() {
     const { header, mainHeight } = useSelector((s) => s.components);
@@ -60,7 +59,6 @@ function Main() {
                 <Route path="/quiz/*" element={<Quiz />} />
                 <Route path="/contact/*" element={<Contact />} />
                 <Route path="/dragndrop/*" element={<DragNDrop_DndKit />} />
-                <Route path="/cardgenerator/*" element={<CardGenerator />} />
                 <Route
                     path="/dragndrop-fm/*"
                     element={<DragNDrop_FramerMotion />}

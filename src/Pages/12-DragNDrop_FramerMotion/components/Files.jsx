@@ -11,7 +11,7 @@ function Files() {
 
     return (
         <article className=" grid gap-4">
-            {files.length > 0 && (
+            {files?.length > 0 && (
                 <>
                     <Reorder.Group
                         className=" bg-gray-500 grid gap-4 p-4 md:grid-cols-2"

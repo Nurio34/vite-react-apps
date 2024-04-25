@@ -59,11 +59,6 @@ function Footer() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/vite-react-projects/cardgenerator">
-                        Card Generator
-                    </Link>
-                </li>
-                <li>
                     <Link to="/vite-react-projects/dragndrop-fm">
                         Drag&Drop(FramerMotion)
                     </Link>
