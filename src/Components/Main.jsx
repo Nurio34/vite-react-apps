@@ -15,6 +15,7 @@ import Quiz from "../Pages/9-Quiz";
 import Contact from "../Pages/10-Contact";
 import DragNDrop_DndKit from "../Pages/11-DragNDrop_dnd-kit";
 import DragNDrop_FramerMotion from "../Pages/12-DragNDrop_FramerMotion";
+import DragNDrop from "../Pages/13-Drag&Drop";
 
 function Main() {
     const { header, mainHeight } = useSelector((s) => s.components);
@@ -63,6 +64,7 @@ function Main() {
                     path="/dragndrop-fm/*"
                     element={<DragNDrop_FramerMotion />}
                 />
+                <Route path="/drag&drop/*" element={<DragNDrop />} />
             </Routes>
         </main>
     );

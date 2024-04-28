@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
     return (
-        <footer className=" bg-white">
+        <footer className=" bg-white overflow-hidden">
             <h2>Projects</h2>
             <ul
                 className=" grid grid-cols-3  py-[1vh] px-[1vw] text-purple-600 underline underline-offset-2 text-xs 
@@ -62,6 +62,9 @@ function Footer() {
                     <Link to="/vite-react-projects/dragndrop-fm">
                         Drag&Drop(FramerMotion)
                     </Link>
+                </li>
+                <li>
+                    <Link to="/vite-react-projects/drag&drop">Drag&Drop</Link>
                 </li>
             </ul>
         </footer>
