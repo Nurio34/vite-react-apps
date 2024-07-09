@@ -88416,6 +88416,900 @@ export const data = [
                 eps: undefined,
             },
         ],
+    }, {
+        id: "rnpol",
+        name:"rainbow polikarbonat",
+        sector: "diğer kimyasal ürünler",
+        paidInCapital: 30000000,
+        pfr: 50,
+        financials: [
+            
+                {
+                    "year": 2023,
+                    "net_sales": 681.22,
+                    "ebidta": 80.78,
+                    "net_profit": -22.27,
+                    "equity": 650.58,
+                    "total_assets": 1135.02
+                },
+                {
+                    "year": 2022,
+                    "net_sales": 719.12,
+                    "ebidta": 52.41,
+                    "net_profit": 33.6,
+                    "equity": 597.06,
+                    "total_assets": 1031.85
+                },
+                {
+                    "year": 2021,
+                    "net_sales": 203.45,
+                    "ebidta": 38.98,
+                    "net_profit": 14.28,
+                    "equity": 173.42,
+                    "total_assets": 274.47
+                },
+                {
+                    "year": 2020,
+                    "net_sales": 115.09,
+                    "ebidta": 16.98,
+                    "net_profit": 4.85,
+                    "equity": 50.99,
+                    "total_assets": 128.11
+                }
+            ,
+            
+                {
+                    "year": 2019,
+                    "net_sales": 77.72,
+                    "ebidta": 8.6,
+                    "net_profit": 0.54,
+                    "equity": 27.57,
+                    "total_assets": 86.59
+                },
+                {
+                    "year": 2018,
+                    "net_sales": 82.77,
+                    "ebidta": 13.82,
+                    "net_profit": -1.65,
+                    "equity": 23.06,
+                    "total_assets": 73.75
+                }
+            ,
+            {
+                year: 2017,
+                net_sales: undefined,
+                ebidta: undefined,
+                net_profit: undefined,
+                equity: undefined,
+                total_assets: undefined,
+            },
+            {
+                year: 2016,
+                net_sales: undefined,
+                ebidta: undefined,
+                net_profit: undefined,
+                equity: undefined,
+                total_assets: undefined,
+            },
+        ],
+        profitability: [
+            
+                {
+                    "year": 2023,
+                    "price": 39.58,
+                    "p/e": null,
+                    "pd/ds": 1.83,
+                    "fd/ebidta": 16.97,
+                    "fd/sales": 2.01,
+                    "eps": -0.74
+                },
+                {
+                    "year": 2022,
+                    "price": 21.54,
+                    "p/e": 19.23,
+                    "pd/ds": 1.08,
+                    "fd/ebidta": 14.94,
+                    "fd/sales": 1.09,
+                    "eps": 1.12
+                },
+                {
+                    "year": 2021,
+                    "price": 12.3,
+                    "p/e": 25.83,
+                    "pd/ds": 2.13,
+                    "fd/ebidta": 10.26,
+                    "fd/sales": 1.97,
+                    "eps": 0.48
+                },
+                {
+                    "year": 2020,
+                    "price": null,
+                    "p/e": null,
+                    "pd/ds": null,
+                    "fd/ebidta": null,
+                    "fd/sales": null,
+                    "eps": 0.16
+                }
+            ,
+            
+                {
+                    "year": 2019,
+                    "gross_profit_margin": 14.21,
+                    "ebidta_margin": 11.06,
+                    "net_profit_margin": 0.7,
+                    "roe": 2.15,
+                    "roa": 0.68
+                },
+                {
+                    "year": 2018,
+                    "gross_profit_margin": 19.92,
+                    "ebidta_margin": 16.7,
+                    "net_profit_margin": -2,
+                    "roe": -7.17,
+                    "roa": -2.24
+                }
+            ,
+            {
+                year: 2017,
+                gross_profit_margin: undefined,
+                ebidta_margin: undefined,
+                net_profit_margin: undefined,
+                roe: undefined,
+                roa: undefined,
+            },
+            {
+                year: 2016,
+                gross_profit_margin: undefined,
+                ebidta_margin: undefined,
+                net_profit_margin: undefined,
+                roe: undefined,
+                roa: undefined,
+            },
+        ],
+        valuation: [
+            
+                {
+                    "year": 2023,
+                    "price": 39.58,
+                    "p/e": null,
+                    "pd/ds": 1.83,
+                    "fd/ebidta": 16.97,
+                    "fd/sales": 2.01,
+                    "eps": -0.74
+                },
+                {
+                    "year": 2022,
+                    "price": 21.54,
+                    "p/e": 19.23,
+                    "pd/ds": 1.08,
+                    "fd/ebidta": 14.94,
+                    "fd/sales": 1.09,
+                    "eps": 1.12
+                },
+                {
+                    "year": 2021,
+                    "price": 12.3,
+                    "p/e": 25.83,
+                    "pd/ds": 2.13,
+                    "fd/ebidta": 10.26,
+                    "fd/sales": 1.97,
+                    "eps": 0.48
+                },
+                {
+                    "year": 2020,
+                    "price": null,
+                    "p/e": null,
+                    "pd/ds": null,
+                    "fd/ebidta": null,
+                    "fd/sales": null,
+                    "eps": 0.16
+                }
+            ,
+            
+                {
+                    "year": 2019,
+                    "price": null,
+                    "p/e": null,
+                    "pd/ds": null,
+                    "fd/ebidta": null,
+                    "fd/sales": null,
+                    "eps": 0.02
+                },
+                {
+                    "year": 2018,
+                    "price": null,
+                    "p/e": null,
+                    "pd/ds": null,
+                    "fd/ebidta": null,
+                    "fd/sales": null,
+                    "eps": -0.06
+                }
+            ,
+            {
+                year: 2017,
+                price: undefined,
+                "p/e": undefined,
+                "pd/ds": undefined,
+                "fd/ebidta": undefined,
+                "fd/sales": undefined,
+                eps: undefined,
+            },
+            {
+                year: 2016,
+                price: undefined,
+                "p/e": undefined,
+                "pd/ds": undefined,
+                "fd/ebidta": undefined,
+                "fd/sales": undefined,
+                eps: undefined,
+            },
+        ],
+    }, {
+        id: "ralyh",
+        name: "ral yatırım holding",
+        sector: "yatırım şirketleri",
+        paidInCapital: 63000000,
+        pfr: 37.0,
+        financials: [
+            
+                {
+                    "year": 2023,
+                    "net_sales": 2089.8,
+                    "ebidta": 677.18,
+                    "net_profit": 378.65,
+                    "equity": 1491.3,
+                    "total_assets": 2823.82
+                },
+                {
+                    "year": 2022,
+                    "net_sales": 695.94,
+                    "ebidta": 271.23,
+                    "net_profit": 461.93,
+                    "equity": 915.7,
+                    "total_assets": 1604.69
+                },
+                {
+                    "year": 2021,
+                    "net_sales": 275.26,
+                    "ebidta": 37.48,
+                    "net_profit": 28.57,
+                    "equity": 102.87,
+                    "total_assets": 292.93
+                },
+                {
+                    "year": 2020,
+                    "net_sales": 122.13,
+                    "ebidta": 12.22,
+                    "net_profit": 4.87,
+                    "equity": 73.63,
+                    "total_assets": 151.89
+                }
+            ,
+            
+                {
+                    "year": 2019,
+                    "net_sales": 19.12,
+                    "ebidta": -0.31,
+                    "net_profit": -4.96,
+                    "equity": 32.89,
+                    "total_assets": 85.64
+                },
+                {
+                    "year": 2018,
+                    "net_sales": 8.72,
+                    "ebidta": 1.4,
+                    "net_profit": 2.6,
+                    "equity": 21.42,
+                    "total_assets": 24.75
+                },
+                {
+                    "year": 2017,
+                    "net_sales": null,
+                    "ebidta": -1.58,
+                    "net_profit": 1.77,
+                    "equity": 13.23,
+                    "total_assets": 14.74
+                },
+                {
+                    "year": 2016,
+                    "net_sales": 8.2,
+                    "ebidta": -0.7,
+                    "net_profit": 16.59,
+                    "equity": 11.52,
+                    "total_assets": 12.62
+                }
+            
+        ],
+        profitability: [
+            
+                {
+                    "year": 2023,
+                    "gross_profit_margin": 32.71,
+                    "ebidta_margin": 32.4,
+                    "net_profit_margin": 18.12,
+                    "roe": 31.46,
+                    "roa": 17.1
+                },
+                {
+                    "year": 2022,
+                    "gross_profit_margin": 41.04,
+                    "ebidta_margin": 38.97,
+                    "net_profit_margin": 66.37,
+                    "roe": 90.7,
+                    "roa": 48.68
+                },
+                {
+                    "year": 2021,
+                    "gross_profit_margin": 15.41,
+                    "ebidta_margin": 13.62,
+                    "net_profit_margin": 10.38,
+                    "roe": 32.37,
+                    "roa": 12.85
+                },
+                {
+                    "year": 2020,
+                    "gross_profit_margin": 12.67,
+                    "ebidta_margin": 10,
+                    "net_profit_margin": 3.99,
+                    "roe": 9.15,
+                    "roa": 4.1
+                }
+            ,
+            
+                {
+                    "year": 2019,
+                    "gross_profit_margin": 14.57,
+                    "ebidta_margin": -1.6,
+                    "net_profit_margin": -25.95,
+                    "roe": -18.27,
+                    "roa": -8.99
+                },
+                {
+                    "year": 2018,
+                    "gross_profit_margin": 36.07,
+                    "ebidta_margin": 16,
+                    "net_profit_margin": 29.86,
+                    "roe": 15.03,
+                    "roa": 13.19
+                },
+                {
+                    "year": 2017,
+                    "gross_profit_margin": null,
+                    "ebidta_margin": null,
+                    "net_profit_margin": null,
+                    "roe": 14.3,
+                    "roa": 12.93
+                },
+                {
+                    "year": 2016,
+                    "gross_profit_margin": 9.49,
+                    "ebidta_margin": -8.55,
+                    "net_profit_margin": 202.41,
+                    "roe": 529.09,
+                    "roa": 130.77
+                }
+            
+        ],
+        valuation: [
+            
+                {
+                    "year": 2023,
+                    "price": 77.85,
+                    "p/e": 12.95,
+                    "pd/ds": 3.29,
+                    "fd/ebidta": 7.49,
+                    "fd/sales": 2.43,
+                    "eps": 6.01
+                },
+                {
+                    "year": 2022,
+                    "price": 35.94,
+                    "p/e": 4.9,
+                    "pd/ds": 2.47,
+                    "fd/ebidta": 8.6,
+                    "fd/sales": 3.35,
+                    "eps": 7.33
+                },
+                {
+                    "year": 2021,
+                    "price": 13.25,
+                    "p/e": 29.22,
+                    "pd/ds": 8.11,
+                    "fd/ebidta": 22.8,
+                    "fd/sales": 3.1,
+                    "eps": 0.45
+                },
+                {
+                    "year": 2020,
+                    "price": 4.44,
+                    "p/e": 57.42,
+                    "pd/ds": 3.8,
+                    "fd/ebidta": 22.91,
+                    "fd/sales": 2.29,
+                    "eps": 0.08
+                }
+            ,
+            
+                {
+                    "year": 2019,
+                    "price": 2.62,
+                    "p/e": null,
+                    "pd/ds": 4.34,
+                    "fd/ebidta": -484.27,
+                    "fd/sales": 7.77,
+                    "eps": -0.24
+                },
+                {
+                    "year": 2018,
+                    "price": 0.71,
+                    "p/e": 14.84,
+                    "pd/ds": 1.8,
+                    "fd/ebidta": 27.69,
+                    "fd/sales": 4.43,
+                    "eps": 0.12
+                },
+                {
+                    "year": 2017,
+                    "price": 0.77,
+                    "p/e": 19.35,
+                    "pd/ds": 2.59,
+                    "fd/ebidta": -21.62,
+                    "fd/sales": null,
+                    "eps": 0.08
+                },
+                {
+                    "year": 2016,
+                    "price": 0.2,
+                    "p/e": 0.54,
+                    "pd/ds": 0.78,
+                    "fd/ebidta": -12.88,
+                    "fd/sales": 1.1,
+                    "eps": 0.79
+                }
+            
+        ],
+    }, {
+        id: "reedr",
+        name: "reeder teknoloji",
+        sector: "bilişim ve yazılım",
+        paidInCapital: 950000000,
+        pfr: 23.0,
+        financials: [
+            
+                {
+                    "year": 2023,
+                    "net_sales": 2647.21,
+                    "ebidta": 1117.77,
+                    "net_profit": 869.39,
+                    "equity": 5403.42,
+                    "total_assets": 7401.09
+                },
+                {
+                    "year": 2022,
+                    "net_sales": 1821.11,
+                    "ebidta": 729.01,
+                    "net_profit": 412.28,
+                    "equity": 2138.27,
+                    "total_assets": 3752.21
+                },
+                {
+                    "year": 2021,
+                    "net_sales": 451.39,
+                    "ebidta": 72.22,
+                    "net_profit": 103.81,
+                    "equity": 141.26,
+                    "total_assets": 540.45
+                },
+                {
+                    "year": 2020,
+                    "net_sales": 238.86,
+                    "ebidta": 34.85,
+                    "net_profit": 33.86,
+                    "equity": 37.6,
+                    "total_assets": 123.9
+                }
+            ,
+            {
+                year: 2019,
+                net_sales: undefined,
+                ebidta: undefined,
+                net_profit: undefined,
+                equity: undefined,
+                total_assets: undefined,
+            },
+            {
+                year: 2018,
+                net_sales: undefined,
+                ebidta: undefined,
+                net_profit: undefined,
+                equity: undefined,
+                total_assets: undefined,
+            },
+            {
+                year: 2017,
+                net_sales: undefined,
+                ebidta: undefined,
+                net_profit: undefined,
+                equity: undefined,
+                total_assets: undefined,
+            },
+            {
+                year: 2016,
+                net_sales: undefined,
+                ebidta: undefined,
+                net_profit: undefined,
+                equity: undefined,
+                total_assets: undefined,
+            },
+        ],
+        profitability: [
+            
+                {
+                    "year": 2023,
+                    "gross_profit_margin": 60.55,
+                    "ebidta_margin": 42.22,
+                    "net_profit_margin": 32.84,
+                    "roe": 23.06,
+                    "roa": 15.59
+                },
+                {
+                    "year": 2022,
+                    "gross_profit_margin": 51.2,
+                    "ebidta_margin": 40.03,
+                    "net_profit_margin": 22.64,
+                    "roe": 36.17,
+                    "roa": 19.21
+                },
+                {
+                    "year": 2021,
+                    "gross_profit_margin": 24.99,
+                    "ebidta_margin": 16,
+                    "net_profit_margin": 23,
+                    "roe": 116.08,
+                    "roa": 31.25
+                },
+                {
+                    "year": 2020,
+                    "gross_profit_margin": 20.44,
+                    "ebidta_margin": 14.59,
+                    "net_profit_margin": 14.17,
+                    "roe": 90.04,
+                    "roa": 27.32
+                }
+            ,
+            {
+                year: 2019,
+                gross_profit_margin: undefined,
+                ebidta_margin: undefined,
+                net_profit_margin: undefined,
+                roe: undefined,
+                roa: undefined,
+            },
+            {
+                year: 2018,
+                gross_profit_margin: undefined,
+                ebidta_margin: undefined,
+                net_profit_margin: undefined,
+                roe: undefined,
+                roa: undefined,
+            },
+            {
+                year: 2017,
+                gross_profit_margin: undefined,
+                ebidta_margin: undefined,
+                net_profit_margin: undefined,
+                roe: undefined,
+                roa: undefined,
+            },
+            {
+                year: 2016,
+                gross_profit_margin: undefined,
+                ebidta_margin: undefined,
+                net_profit_margin: undefined,
+                roe: undefined,
+                roa: undefined,
+            },
+        ],
+        valuation: [
+            
+                {
+                    "year": 2023,
+                    "price": 21.56,
+                    "p/e": 23.56,
+                    "pd/ds": 3.79,
+                    "fd/ebidta": 18.42,
+                    "fd/sales": 7.78,
+                    "eps": 0.92
+                },
+                {
+                    "year": 2022,
+                    "price": null,
+                    "p/e": null,
+                    "pd/ds": null,
+                    "fd/ebidta": null,
+                    "fd/sales": null,
+                    "eps": 0.43
+                },
+                {
+                    "year": 2021,
+                    "price": null,
+                    "p/e": null,
+                    "pd/ds": null,
+                    "fd/ebidta": null,
+                    "fd/sales": null,
+                    "eps": 0.11
+                },
+                {
+                    "year": 2020,
+                    "price": null,
+                    "p/e": null,
+                    "pd/ds": null,
+                    "fd/ebidta": null,
+                    "fd/sales": null,
+                    "eps": 0.04
+                }
+            ,
+            {
+                year: 2019,
+                price: undefined,
+                "p/e": undefined,
+                "pd/ds": undefined,
+                "fd/ebidta": undefined,
+                "fd/sales": undefined,
+                eps: undefined,
+            },
+            {
+                year: 2018,
+                price: undefined,
+                "p/e": undefined,
+                "pd/ds": undefined,
+                "fd/ebidta": undefined,
+                "fd/sales": undefined,
+                eps: undefined,
+            },
+            {
+                year: 2017,
+                price: undefined,
+                "p/e": undefined,
+                "pd/ds": undefined,
+                "fd/ebidta": undefined,
+                "fd/sales": undefined,
+                eps: undefined,
+            },
+            {
+                year: 2016,
+                price: undefined,
+                "p/e": undefined,
+                "pd/ds": undefined,
+                "fd/ebidta": undefined,
+                "fd/sales": undefined,
+                eps: undefined,
+            },
+        ],
+    }, {
+        id: "rygyo",
+        name: "reysaş gmyo",
+        sector: "gayrimenkul yat ort",
+        paidInCapital: 500000000,
+        pfr: 30.0,
+        financials: [
+            
+                {
+                    "year": 2023,
+                    "net_sales": 1671.92,
+                    "ebidta": 1399.33,
+                    "net_profit": 17245.41,
+                    "equity": 34063.87,
+                    "total_assets": 38353.39
+                },
+                {
+                    "year": 2022,
+                    "net_sales": 961.69,
+                    "ebidta": 857.91,
+                    "net_profit": 8322.81,
+                    "equity": 11705.73,
+                    "total_assets": 15868.37
+                },
+                {
+                    "year": 2021,
+                    "net_sales": 314.35,
+                    "ebidta": 278.79,
+                    "net_profit": 1542.29,
+                    "equity": 3944.54,
+                    "total_assets": 5645.72
+                },
+                {
+                    "year": 2020,
+                    "net_sales": 261.28,
+                    "ebidta": 236.73,
+                    "net_profit": 410.43,
+                    "equity": 2107.71,
+                    "total_assets": 3479.56
+                }
+            ,
+            
+                {
+                    "year": 2019,
+                    "net_sales": 214.05,
+                    "ebidta": 190.01,
+                    "net_profit": 548.71,
+                    "equity": 1698.54,
+                    "total_assets": 2792.78
+                },
+                {
+                    "year": 2018,
+                    "net_sales": 162.63,
+                    "ebidta": 141.34,
+                    "net_profit": 212.11,
+                    "equity": 1149.86,
+                    "total_assets": 2266.34
+                },
+                {
+                    "year": 2017,
+                    "net_sales": 112.16,
+                    "ebidta": 99.52,
+                    "net_profit": 110.89,
+                    "equity": 937.75,
+                    "total_assets": 1879.3
+                },
+                {
+                    "year": 2016,
+                    "net_sales": 81.89,
+                    "ebidta": 63.46,
+                    "net_profit": 131.38,
+                    "equity": 826.91,
+                    "total_assets": 1518.57
+                }
+            
+        ],
+        profitability: [
+            
+                {
+                    "year": 2023,
+                    "gross_profit_margin": 80.19,
+                    "ebidta_margin": 83.7,
+                    "net_profit_margin": 1031.47,
+                    "roe": 75.36,
+                    "roa": 63.61
+                },
+                {
+                    "year": 2022,
+                    "gross_profit_margin": 87.52,
+                    "ebidta_margin": 89.21,
+                    "net_profit_margin": 865.44,
+                    "roe": 106.36,
+                    "roa": 77.37
+                },
+                {
+                    "year": 2021,
+                    "gross_profit_margin": 87.08,
+                    "ebidta_margin": 88.69,
+                    "net_profit_margin": 490.63,
+                    "roe": 50.97,
+                    "roa": 33.8
+                },
+                {
+                    "year": 2020,
+                    "gross_profit_margin": 88.73,
+                    "ebidta_margin": 90.6,
+                    "net_profit_margin": 157.08,
+                    "roe": 21.57,
+                    "roa": 13.09
+                }
+            ,
+            
+                {
+                    "year": 2019,
+                    "gross_profit_margin": 87.65,
+                    "ebidta_margin": 88.77,
+                    "net_profit_margin": 256.35,
+                    "roe": 38.53,
+                    "roa": 21.69
+                },
+                {
+                    "year": 2018,
+                    "gross_profit_margin": 86.38,
+                    "ebidta_margin": 86.91,
+                    "net_profit_margin": 130.42,
+                    "roe": 20.32,
+                    "roa": 10.23
+                },
+                {
+                    "year": 2017,
+                    "gross_profit_margin": 88.31,
+                    "ebidta_margin": 88.73,
+                    "net_profit_margin": 98.87,
+                    "roe": 12.57,
+                    "roa": 6.53
+                },
+                {
+                    "year": 2016,
+                    "gross_profit_margin": 84.99,
+                    "ebidta_margin": 77.49,
+                    "net_profit_margin": 160.43,
+                    "roe": 17.24,
+                    "roa": 9.31
+                }
+            
+        ],
+        valuation: [
+            
+                {
+                    "year": 2023,
+                    "price": 26.26,
+                    "p/e": 0.76,
+                    "pd/ds": 0.39,
+                    "fd/ebidta": 10.53,
+                    "fd/sales": 8.81,
+                    "eps": 34.49
+                },
+                {
+                    "year": 2022,
+                    "price": 15.5,
+                    "p/e": 0.93,
+                    "pd/ds": 0.66,
+                    "fd/ebidta": 12.35,
+                    "fd/sales": 11.01,
+                    "eps": 16.65
+                },
+                {
+                    "year": 2021,
+                    "price": 3.75,
+                    "p/e": 1.22,
+                    "pd/ds": 0.48,
+                    "fd/ebidta": 11.13,
+                    "fd/sales": 9.87,
+                    "eps": 3.08
+                },
+                {
+                    "year": 2020,
+                    "price": 3.24,
+                    "p/e": 3.27,
+                    "pd/ds": 0.64,
+                    "fd/ebidta": 10.26,
+                    "fd/sales": 9.3,
+                    "eps": 1.67
+                }
+            ,
+            
+                {
+                    "year": 2019,
+                    "price": 2.73,
+                    "p/e": 2.06,
+                    "pd/ds": 0.66,
+                    "fd/ebidta": 11.31,
+                    "fd/sales": 10.04,
+                    "eps": 2.23
+                },
+                {
+                    "year": 2018,
+                    "price": 0.41,
+                    "p/e": 0.8,
+                    "pd/ds": 0.15,
+                    "fd/ebidta": 8.23,
+                    "fd/sales": 7.15,
+                    "eps": 0.86
+                },
+                {
+                    "year": 2017,
+                    "price": 0.76,
+                    "p/e": 2.82,
+                    "pd/ds": 0.33,
+                    "fd/ebidta": 10.52,
+                    "fd/sales": 9.33,
+                    "eps": 0.45
+                },
+                {
+                    "year": 2016,
+                    "price": 0.4,
+                    "p/e": 1.25,
+                    "pd/ds": 0.2,
+                    "fd/ebidta": 12.38,
+                    "fd/sales": 9.6,
+                    "eps": 0.53
+                }
+            
+        ],
     },
 ];
 
