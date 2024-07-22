@@ -3,7 +3,7 @@ import GlobalApp from "./GlobalApp";
 import Header from "./components/Header";
 import Main from "./components/Main";
 
-import { goTopOfPage } from "../../functions/functions/goTopOfPage";
+import { goTopOfPage } from "../../utils/functions/goTopOfPage";
 
 function index() {
     useEffect(() => {

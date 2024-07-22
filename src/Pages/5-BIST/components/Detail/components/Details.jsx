@@ -1,5 +1,5 @@
 import { memo, useCallback, useEffect, useMemo } from "react";
-import { goodLookingNumber } from "../../../../../functions/functions/goodLookingNumber";
+import { goodLookingNumber } from "../../../../../utils/functions/goodLookingNumber";
 import { AiTwotoneCheckCircle, AiTwotoneCloseCircle } from "react-icons/ai";
 
 function Details({ stock, year }) {

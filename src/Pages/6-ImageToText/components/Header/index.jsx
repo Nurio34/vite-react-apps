@@ -2,8 +2,8 @@ import { useGlobalContext } from "../../GlobalApp";
 import { Code } from "../../../../assets/icons";
 import ThemeChange from "./ThemeChange/ThemeChange";
 import { useEffect, useRef } from "react";
-import { typeAnimation } from "../../../../functions/functions/typeAnimation";
-import "../../../../functions/styles/index.css";
+import { typeAnimation } from "../../../../utils/functions/typeAnimation";
+import "../../../../utils/styles/index.css";
 
 function index() {
     const { isThemeLight } = useGlobalContext();

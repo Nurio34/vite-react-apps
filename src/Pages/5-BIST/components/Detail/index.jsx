@@ -6,7 +6,7 @@ import Details from "./components/Details";
 import { useEffect, useState } from "react";
 import { IoArrowBackCircle } from "react-icons/io5";
 import Search from "../Search";
-import { goTopOfPage } from "../../../../functions/functions/goTopOfPage";
+import { goTopOfPage } from "../../../../utils/functions/goTopOfPage";
 
 function index() {
     const location = useLocation();

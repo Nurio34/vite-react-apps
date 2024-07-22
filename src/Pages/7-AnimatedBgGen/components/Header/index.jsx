@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Bug } from "../../../../assets/icons";
-import { typeAnimation } from "../../../../functions/functions/typeAnimation";
-import "../../../../functions/styles/index.css";
+import { typeAnimation } from "../../../../utils/functions/typeAnimation";
+import "../../../../utils/styles/index.css";
 import ThemeChange from "../Header/ThemeChange/ThemeChange";
 import { useGlobalContext } from "../../GlobalApp";
 import "./index.scss";

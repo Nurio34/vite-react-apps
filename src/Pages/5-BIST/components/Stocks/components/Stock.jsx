@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Rank1_img from "../../../../../assets/Rank1.webp";
 import Rank2_img from "../../../../../assets/Rank2.webp";
 import Rank3_img from "../../../../../assets/Rank3.webp";
-import { goodLookingNumber } from "../../../../../functions/functions/goodLookingNumber";
+import { goodLookingNumber } from "../../../../../utils/functions/goodLookingNumber";
 
 function Stock({ stock }) {
     const { id, name, rank, sector, paidInCapital, pfr } = stock;

@@ -1,0 +1,13 @@
+.typeAnimation {
+    display: inline-block;
+    border-right: 2px solid black;
+    padding-inline-end: 4px;
+    animation: anim 0.3s infinite alternate;
+    min-height: 1rem;
+}
+
+@keyframes anim {
+    to {
+        border-color: transparent;
+    }
+}
